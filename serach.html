@@ -394,24 +394,43 @@
 
     function showProduct(product) {
         let div = document.createElement('div');
-        div.style.height = '600px'
+        div.style.height = '600px';
+        div.style.border = '1px solid black';
+        div.style.borderRadius = '10px';
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.style.alignItems = 'center';
 
         let img = document.createElement('img');
         img.src = product.image;
         img.style.width = '100%';
+        img.style.overflow = 'hidden';
 
         let img_box = document.createElement('div');
+        img_box.style.borderRadius = '10px';
+        img_box.style.border = '1px solid red';
         img_box.style.height = '60%';
         img_box.append(img);
+        // img_box.style.margin = 'auto';
+        img_box.addEventListener('click', function(){
+            newPage(product);
+        })
+        
 
         let name = document.createElement('a');
-        name.href = product.name + ' ' ;
+        name.href = 'product-page.html';
+        name.innerHTML = product.name + ' ' ;
+        name.style.fontSize = '25px';
+        name.style.textAlign = 'center';
 
         let price = document.createElement('p');
         price.innerHTML = product.price;
+        price.style.textAlign = 'center'
 
         let btn = document.createElement('button');
         btn.innerHTML = 'Contact Supplier';
+        btn.style.padding = '2% 10%' ;
+        btn.style.display = 'justify-center     '
 
         btn.addEventListener('click', function(){
             console.log('cart');
@@ -436,4 +455,9 @@
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
+
+    function newPage(product) {
+        localStorage.setItem('item', JSON.stringify(product));
+        window.location.href = 'product-page.html'
+    }
 </script>

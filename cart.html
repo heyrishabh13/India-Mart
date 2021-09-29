@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let body = document.querySelector('body');
+    let container = document.createElement('div');
+
+    body.append(container);
+
+    let arr = JSON.parse(localStorage.getItem('cart'));
+
+    arr.forEach(function(product){
+        showCart(product);
+    })
+
+    function showCart(product) {
+        let div = document.createElement('div');
+        div.style.height = '150px';
+        div.style.backgroundColor = 'grey';
+        div.style.borderRadius = '10px';
+
+        let h2 = document.createElement('h2');
+        h2.innerHTML = product.seller + ', ' + product.size;
+        h2.style.paddingLeft = '5%'
+        h2.style.marginTop = '';
+
+        let p = document.createElement('p');
+        p.innerHTML = 'I want to buy ' + product.name + '.';
+        p.style.paddingLeft = '5%';
+        div.append(h2, p);
+
+        container.append(div);
+    }
+</script>

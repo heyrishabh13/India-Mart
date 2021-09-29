@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let arr = JSON.parse(localStorage.getItem('products'));
+    let body = document.querySelector('body');
+    let h1 = document.createElement('h1');
+
+    let container = document.createElement('div');
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = '25% 25% 25%';
+    container.style.gridGap = '1%';
+
+    console.log(h1);
+
+    body.append(h1, container);
+    // console.log(arr);
+    let str = 'Rice';
+    h1.innerHTML = str;
+
+    str.toLowerCase();
+
+    arr.forEach(function(product){
+        let to_check = product.name;
+        to_check.toLowerCase();
+
+        if( to_check.trim().split(' ').includes(str)){
+            console.log('hello');
+            showProduct(product);
+        }
+    })
+
+    function showProduct(product) {
+        let div = document.createElement('div');
+        div.style.height = '600px'
+
+        let img = document.createElement('img');
+        img.src = product.img;
+        img.style.width = '100%';
+
+        let img_box = document.createElement('div');
+        img_box.style.height = '60%';
+        img_box.append(img);
+
+        let name = document.createElement('a');
+        name.href = product.name + ' ' ;
+
+        let price = document.createElement('p');
+        price.innerHTML = product.price;
+
+        let btn = document.createElement('button');
+        btn.innerHTML = 'Contact Supplier';
+
+        btn.addEventListener('click', function(){
+            console.log('cart');
+            add_to_cart(product);
+        })
+
+        div.append(img_box, name, price, btn);
+
+        container.append(div);
+    }
+
+    function add_to_cart(product) {
+        
+        if( localStorage.getItem('cart') === null){
+            localStorage.setItem('cart', JSON.stringify([]))
+        }
+
+        let cart = JSON.parse(localStorage.getItem('cart'));
+
+        cart.push(product);
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+</script>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaMART</title>
+    <style>
+        *{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+       
+        .main {
+            height: 3999px;
+        }
+
+        #headers {
+            position: fixed;
+            top: -.2%;
+            left: -.5%;
+        }
+
+        #cont {
+            display: flex;
+            position: fixed;
+            z-index: 8;
+            background-color: #2e3192;
+            height: 55px;
+            width: 100%;
+
+        }
+
+        .img {
+            background-image: url("https://utils.imimg.com/globalhf/hrd-sp-v29.png");
+            background-repeat: no-repeat;
+            /* position: relative;
+            top: 0%; */
+            background-position: 0 3px;
+            background-size: 232%;
+            height: 40px;
+            width: 15%;
+            margin: 0% 2%;
+        }
+
+        .location {
+            display: flex;
+            background-color: white;
+            color: black;
+            border: .7px solid black;
+            width: 166px;
+            height: 34px;
+            /* font-size: 20px; */
+            text-align: center;
+            margin: .8% 0%;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #searchbar {
+            width: 307px;
+            height: 30px;
+            margin: 2.2% -1px;
+            font-size: 15px;
+            outline: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 13px;
+            margin: 8% 2%;
+
+        }
+
+        #mic {
+            margin:3% 0% 3% -12%;
+        }
+
+        .search-button {
+            border: none;
+            display: flex;
+            margin: 2.3% 0.8%;
+            width: 104px;
+            height: 36px;
+            font-size: 15px;
+            background-color: #00a699;
+            color: white;
+            border-radius: 0 4px 4px 0
+        }
+
+        #best-price {
+            border: 1px solid black;
+            background-color: white;
+            color: rgb(12, 12, 80);
+            text-align: center;
+            width: 150px;
+            height: 35px;
+            margin: .8% -4%;
+            border-radius: 3px;
+            font-size:10px;
+        }
+
+        .search-button:hover {
+            background-color: #088f84;
+        }
+
+        #best-price:hover {
+            box-shadow: 0 0 4px 1px rgb(255 255 255 / 50%);
+        }
+
+        .right {
+            display: grid;
+            /* float: right; */
+            color: white;
+            margin: .5% 2% 0% 8%;
+            grid-template-columns: 35% 11% 11% 18% 13%;
+            gap: 13px;
+        }
+
+        .right > div {
+            font-size: 15px;
+        }
+
+        .covi {
+            margin: 0% 31%;
+        }
+
+        .right div:hover {
+            color: blanchedalmond
+        }
+
+        .mgs,
+        .sign {
+            margin: -4% 22%;
+            height: 28px;
+        }
+        #cam {
+            display: flex;
+        }
+
+        #back {
+            width: 101%;
+            border: 1px solid black;
+            height: 330px;
+            background-image: url("https://my.imimg.com/gifs-new/headerbg03.jpg");
+            margin: 0% -1%;
+        }
+
+        #drug {
+            display: flex;
+            flex-wrap: nowrap;
+            border: 1px solid grey;
+            width: 101%;
+            margin: 0% -1%;
+        }
+
+        .parts {
+            display: flex;
+            margin: 0% 3%;
+
+        }
+
+        #text {
+            display: inline-block;
+            font-size: 23px;
+            margin-left: 5%;
+        }
+        @media only screen and (min-width:900px) and (max-width:1300px){
+            .search-text{
+                display: none; 
+            }
+            .search-button{
+                width:50px;
+            }
+            .img{
+               background-image: url("https://reflectivesafetyjackets.in/wp-content/uploads/2019/11/indiamart-icon.png");
+               background-size: contain;
+               margin-right: 0%;
+            }
+            #best-price{
+                font-size: 8px;
+                max-width: 80%;
+            }
+            .right > div{
+                font-size: 10px;
+            }
+            .location{
+                margin-left: -6%;
+            }
+        }
+        
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header id="headers">
+            <div id="cont">
+                <div class="img"></div>
+                <div class="location">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/marker.png" height="16px"
+                        style="margin: 5% 0%;" />
+                    <h1> All India </h1>
+                </div>
+                <div id="cam">
+                    <input type="text" placeholder="Enter product/service to search" id="searchbar" />
+                    <img id="mic" src="https://img.icons8.com/material-rounded/24/000000/microphone.png" />
+                    <button class="search-button"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" />
+                      <span style="margin: 6% 6%" class="search-text">Search</span></button>
+                </div>
+                <div id="best-price">
+                    <h2 style="margin: 6%;">Get Best Price</h2>
+                </div>
+                <div class="right">
+
+                    <div><img class="covi"
+                            src="https://img.icons8.com/pastel-glyph/64/ffffff/coronavirus-shield--v1.png"
+                            height="23px" /><br>
+                        <span>Covid-19 Supplies</span>
+                    </div>
+                    <div><img src="https://img.icons8.com/ios-glyphs/30/ffffff/small-business--v1.png" height="23px" />
+                        <span>Sell</span>
+                    </div>
+                    <div><img src="https://img.icons8.com/material-outlined/24/ffffff/help.png" height="23px" />
+                        <span>Help</span>
+                    </div>
+                    <div><img class="mgs"
+                            src="https://img.icons8.com/material-outlined/24/ffffff/create-new-child-post.png" height="23px"/>
+                        <span>Messages</span>
+                    </div>
+                    <div><img class="sign" src="https://img.icons8.com/windows/32/ffffff/user.png" height="23px" />
+                        <span>Sign in</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="back"></div>
+        <div id="drug">
+            <div class="parts">
+                <img src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-medicine-meds-drugs-prettycons-lineal-color-prettycons-9.png"
+                    height="56px" />
+                <span id="text">Drugs & Pharma</span>
+            </div>
+            <div class="parts">
+                <img src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-medicine-meds-drugs-prettycons-lineal-color-prettycons-9.png"
+                    height="56px" />
+                <span id="text">Drugs & Pharma</span>
+            </div>
+            <div class="parts">
+                <img src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-medicine-meds-drugs-prettycons-lineal-color-prettycons-9.png"
+                    height="56px" />
+                <span id="text">Drugs & Pharma</span>
+            </div>
+            <div class="parts">
+                <img src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-medicine-meds-drugs-prettycons-lineal-color-prettycons-9.png"
+                    height="56px" />
+                <span id="text">Drugs & Pharma</span>
+            </div>
+            <div class="parts">
+                <img src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-medicine-meds-drugs-prettycons-lineal-color-prettycons-9.png"
+                    height="56px" />
+                <span id="text">Drugs & Pharma</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

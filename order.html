@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      #products {
+        margin: 0.5% 7%;
+        border: 1px solid red;
+            
+      }
+      body{
+        background-color: #ECEFF1;
+      }
+      h1{
+        padding: 1%;
+        margin: 1% 6%;
+        background-color: white;
+        width: 10%;
+      }
+
+    </style>
+</head>
+<body>
+    <h1> My Orders</h1>
+
+    <div id="products"></div>
+</body>
+</html>
+
+<script>
+
+    // get the data 
+
+    let orders = JSON.parse(localStorage.getItem("order"));
+
+    let parent = document.getElementById("products");
+    var c = 0;
+
+    function showProducts() {
+
+    orders.forEach(function(product) {
+      
+    let div = document.createElement("div");
+    let product_name = document.createElement("p");
+    product_name.textContent = product.name;
+    c++;
+    
+    let product_con = document.createElement("p");
+    product_con.textContent = c + "supplier Connected";
+
+
+    let product_int = document.createElement("p");
+    product_int.textContent = "I am interseted in " + product.name;
+
+    div.append(product_name, product_int,product_con);
+
+    parent.append(div);
+});
+}
+showProducts();
+
+</script>

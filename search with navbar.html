@@ -187,7 +187,7 @@
             height: 1200px;
             background-color: white;
                
-            margin-top: -248%;   
+            margin-top: -263%;   
             margin-left: 1%;  
             word-wrap:break-word;
         }
@@ -237,9 +237,9 @@
         }
         #upper{
             display: inline-block;
-            float:right;
+            float: right;
             width: 84%;
-            margin-top: -248%;
+            margin-top: -265%;
             
         }
         .vr{
@@ -271,9 +271,9 @@
                     <h1> All India </h1>
                 </div>
                 <div id="cam">
-                    <input type="text" placeholder="Enter product/service to search" id="searchbar" />
+                    <input type="text" placeholder="Enter product/service to search" id="search-bar" value='' />
                     <img id="mic" src="https://img.icons8.com/material-rounded/24/000000/microphone.png" />
-                    <button class="search-button"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" />
+                    <button class="search-button" id='search-btn'><img src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" />
                       <span style="margin: 6% 6%" class="search-text">Search</span></button>
                 </div>
                 <div id="best-price">
@@ -899,27 +899,42 @@
    
    
     // console.log(arr);
-    let str = 'rice';
-    // str.style.textDecoration = "none"
-    h2.innerHTML = str;
+    
+    let search_btn = document.getElementById('search-btn');
+    
+    search_btn.addEventListener('click',function(e){
+        e.preventDefault();
 
-    str = str.toLowerCase();
+        container.innerHTML= null;
+        
+        let search = document.getElementById('search-bar');        
+        let str =  search.value;
+        console.log('str',str);
+        h2.innerHTML = str;
 
-    let count = 0;
+        str = str.toLowerCase();
+
+        let count = 0;
+
+        data.forEach(function(product){
+
+            let to_check = product.name;
+            to_check = to_check.toLowerCase();
+            let arr = to_check.trim().split(' ');
+            console.log(arr);
+
+            if( arr.includes(str)){
+                count++;
+                showProduct(product);
+            }
+        }); 
+        
+        h2.innerHTML += ' ( ' + count + ' )';
+    })
+
     
 
-    data.forEach(function(product){
-
-        let to_check = product.name;
-        to_check = to_check.toLowerCase();
-        let arr = to_check.trim().split(' ');
-        console.log(arr);
-
-        if( arr.includes(str)){
-            count++;
-            showProduct(product);
-        }
-    });
+    // h2.innerHTML 
     
 
 

@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gainsboro;
+        }
+        *{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+       
+       
+
+        #headers {
+            position: fixed;
+            top: -.2%;
+            left: -.5%;
+        }
+
+        #cont22 {
+            display: flex;
+            position: fixed;
+            z-index: 8;
+            background-color: #2e3192;
+            height: 55px;
+            width: 100%;
+
+        }
+
+        .img {
+            background-image: url("https://utils.imimg.com/globalhf/hrd-sp-v29.png");
+            background-repeat: no-repeat;
+            /* position: relative;
+            top: 0%; */
+            background-position: 0 3px;
+            background-size: 232%;
+            height: 40px;
+            width: 15%;
+            margin: 0% 2%;
+        }
+
+        .location {
+            display: flex;
+            background-color: white;
+            color: black;
+            border: .7px solid black;
+            width: 166px;
+            height: 34px;
+            /* font-size: 20px; */
+            text-align: center;
+            margin: .8% 0%;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #search-bar {
+            width: 307px;
+            height: 30px;
+            margin: 2.3% -1px;
+            font-size: 15px;
+            outline: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 13px;
+            margin: 8% 2%;
+
+        }
+
+        #mic {
+            margin:3% 0% 3% -12%;
+        }
+
+        .search-button {
+            border: none;
+            display: flex;
+            margin: 2.2% 0.8%;
+            width: 104px;
+            height: 36px;
+            font-size: 15px;
+            background-color: #00a699;
+            color: white;
+            border-radius: 0 4px 4px 0
+        }
+
+        #best-price {
+            border: 1px solid black;
+            background-color: white;
+            color: rgb(12, 12, 80);
+            text-align: center;
+            width: 150px;
+            height: 35px;
+            margin: .8% -4%;
+            border-radius: 3px;
+            font-size:10px;
+        }
+
+        .search-button:hover {
+            background-color: #088f84;
+        }
+
+        #best-price:hover {
+            box-shadow: 0 0 4px 1px rgb(255 255 255 / 50%);
+        }
+
+        .right {
+            display: grid;
+            /* float: right; */
+            color: white;
+            margin: .5% 2% 0% 8%;
+            grid-template-columns: 35% 11% 11% 18% 13%;
+            gap: 13px;
+        }
+
+        .right > div {
+            font-size: 15px;
+        }
+
+        .covi {
+            margin: 0% 31%;
+        }
+
+        /* .right div:hover {
+            
+        } */
+
+        .mgs,
+        .sign {
+            margin: -4% 22%;
+            height: 28px;
+        }
+        #cam {
+            display: flex;
+        }
+
+        @media only screen and (min-width:900px) and (max-width:1300px){
+            .search-text{
+                display: none; 
+            }
+            .search-button{
+                width:50px;
+            }
+            .img{
+               background-image: url("https://reflectivesafetyjackets.in/wp-content/uploads/2019/11/indiamart-icon.png");
+               background-size: contain;
+               margin-right: 0%;
+            }
+            #best-price{
+                font-size: 8px;
+                max-width: 80%;
+            }
+            .right > div{
+                font-size: 10px;
+            }
+            .location{
+                margin-left: -6%;
+            }
+        }
+        
+        button:hover{
+          background-color: #157972;
+          font-weight: 800;
+          box-shadow :2px 2px #033b37 ;
+        }
+        button{
+            margin-top: 28%;
+        }
+        #line1{
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            margin: 4% 1% 1% 1% ;
+            display: flex;
+        }
+        /* span{
+            margin:1% 1% 5% 1%;
+        } */
+        #left{
+            visibility: hidden;
+            /* display: flex; */
+            /* flex-direction: column; */
+           
+            /* height: 1200px; */
+            height: fit-content;
+            background-color: white;
+            /* position: relative; */
+            margin-top: 10%;
+
+            margin-left: 1%;  
+            /* word-wrap:break-word; */
+        }
+        .related{
+      
+            font-size: 10px;
+            display: block;
+            text-align:center;
+            max-width:100%;
+            height:30px;
+            border: 1px solid lightslategray;
+            margin: -1% -1%;
+            background-color: gainsboro;
+
+        }
+        #left li{
+            list-style: none;
+            line-height: 169%;
+            text-align: left;
+            margin: 5% 6%;
+            text-decoration: none;
+            outline: none;
+            color: grey;   
+        }
+
+        #leftdown{
+            
+            max-width: 14%;
+           
+            margin:1% 1% 2% 1%;
+            height: 200px;
+            background-color: white;
+            word-wrap: break-word;
+        }
+        .Btype{
+            margin:4% 1% 0% -9%;
+
+        }
+        #leftdown li{
+            list-style: none;
+            line-height: 169%;
+            text-align: left;
+            margin: 5% 6%;
+            text-decoration: none;
+            outline: none;
+            color: grey;   
+        }
+        #upper{
+            visibility:hidden;
+            display: inline-block;
+            /* position: absolute; */
+            /* float: right; */
+            width: 98%;
+            height: 100%;
+            margin: 0% 5%
+            
+        }
+        .vr{
+            display: inline-flex;
+            background-color: white;
+            width: 10%;
+            height: 150px;
+            border-radius: 5px;
+            /* margin: -7px 0px 0px 5px; */
+            text-align: center;
+        }
+        .vr:hover{
+            border: 3px solid #dadada;
+            background-color: #f6f6f6;
+            padding-bottom: 8px;
+            transition: 1s;
+        }
+        #loc{
+            margin-top: 2%;
+        }
+        .left-cont{
+            display: grid;
+            grid-template-columns: 20% 70% ;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header id="headers">
+            <div id="cont22">
+                <div class="img"></div>
+                <div class="location">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/marker.png" height="16px"
+                        style="margin: 5% 0%;" />
+                    <h1> All India </h1>
+                </div>
+                <div id="cam">
+                    <input type="text" placeholder="Enter product/service to search" id="search-bar" value='' />
+                    <img id="mic" src="https://img.icons8.com/material-rounded/24/000000/microphone.png" />
+                    <button class="search-button" id='search-btn'><img src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" />
+                      <span style="margin: 6% 6%" class="search-text">Search</span></button>
+                </div>
+                <div id="best-price">
+                    <h2 style="margin: 6%;">Get Best Price</h2>
+                </div>
+                <div class="right">
+
+                    <div><img class="covi"src="https://img.icons8.com/pastel-glyph/64/ffffff/coronavirus-shield--v1.png"
+                            height="23px" /><br>
+                        <span>Covid-19 Supplies</span>
+                    </div>
+                    <div><img src="https://img.icons8.com/ios-glyphs/30/ffffff/small-business--v1.png" height="23px" />
+                        <span>Sell</span>
+                    </div>
+                    <div><img src="https://img.icons8.com/material-outlined/24/ffffff/help.png" height="23px" />
+                        <span>Help</span>
+                    </div>
+                    <div><img class="mgs"
+                            src="https://img.icons8.com/material-outlined/24/ffffff/create-new-child-post.png" height="23px"/>
+                        <span>Messages</span>
+                    </div>
+                    <div><img class="sign" src="https://img.icons8.com/windows/32/ffffff/user.png" height="23px" />
+                        <span>Sign in</span>
+                    </div>
+                </div>
+            </div>
+        </header>    
+    </div>
+    <div id="loc"></div>
+   
+    <div id="upper">
+        <h3 style="margin-top:0%;">What type of product you are looking for?</h3>
+        <div class="vr">      
+            <div>
+            <img src="https://3.imimg.com/data3/IS/MS/GLADMIN-105901/rice-125x125.jpg" width="100%"/>
+            <div>Rice</div>
+        </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://4.imimg.com/data4/HR/DP/GLADMIN-2/brown-rice-125x125.jpg" width="100%"/>
+                <div>Brown Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://3.imimg.com/data3/AN/UR/GLADMIN-7388/non-basmati-rice-125x125.jpg" width="100%"/>
+                <div>N-Basmati Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://3.imimg.com/data3/PG/AU/GLADMIN-2093/basmati-rice-125x125.jpg" width="100%"/>
+                <div>Basmati Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://3.imimg.com/data3/UR/QO/GLADMIN-41210/wild-rice-125x125.jpg" width="100%"/>
+                <div>Wild Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://4.imimg.com/data4/SC/EC/GLADMIN-180626/red-rice-125x125.jpg" width="100%"/>
+                <div>Red Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://3.imimg.com/data3/OA/EC/GLADMIN-152944/golden-sella-rice-125x125.jpg" width="100%"/>
+                <div>Golden Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://3.imimg.com/data3/QQ/RV/GLADMIN-22113/aromatic-rice-125x125.jpg" width="100%"/>
+                <div>Aromatic Rice</div>
+            </div>
+        </div>
+        <div class="vr">
+            <div>
+                <img src="https://5.imimg.com/data5/UU/RP/GLADMIN-2/broken-rice-500x500-125x125.jpg" width="100%"/>
+                <div>Broken Rice</div>
+            </div>
+        </div> 
+    </div>
+    <div class="left-cont">
+    <div id="left">
+        <div class="related"><h2 style="margin: 4% 1% 0% -9%;">Related Category</h2></div>
+
+            <li> Rice</li>
+            <li>Organic Black Rice</li>
+            <li>Puffed Rice</li>
+            <li>Sona Masoori Rice</li>
+            <li>1121 Basmati Rice</li>
+            <li>Ponni Rice</li>
+            <li>Steamed Rice</li>
+            <li>Brown Basmati Rice</li>
+            <li>Golden Sella Basmati Rice</li>
+            <li>Idli Rice</li>
+            <li>Poha</li>
+            <li>White Sella Basmati Rice</li>
+            <li>Bamboo Rice</li>
+            <li>Indrayani Rice</li>
+            <li>Tibar Basmati Rice</li>
+            <li>Parboiled Basmati Rice</li>
+            <li>Organic Basmati Rice</li>
+            <li>Swarna Rice</li>
+            <li>Dubar Basmati Rice</li>
+            <li>Sharbati Rice</li>
+            <li>IR-64 Rice</li>
+            <li>BPT Rice</li>
+            <li>Pusa Rice</li>
+            <li>Jasmine Rice</li>
+            <li>Samba Rice</li>
+            <li>HMT Rice</li>
+            <li>armal Rice</li>
+            <li>Biryani Rice</li>
+            <li>Indian Sella Rice</li>
+    </div>
+    <!-- <div id="leftdown">
+       <div class="related"><h2 style="margin: 4% 1% 0% -9%;">Business Type</h2></div> 
+        <li>Manufacturer</li>
+        <li>Exporter</li>
+        <li>Wholesaler</li>
+        <li>Retailer</li>
+    </div> -->
+    
+    
+    <div id="cont"></div>
+</div>
+</body>
+
+</html>
+
+<script>
+    let data=[
+    {
+        name:"Ir64 Basmati Parboiled Fortified Rice",
+        price:"<b>₹85/</b>kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/7/EJ/ZG/TH/9974459/ir64-basmati-parboiled-rice-250x250.jpg",
+  product_dis:"Indian Bsamati rice", 
+      catagory:"rice",
+       
+   seller_name:"Shiva Agro Fooda",
+  sell_address:"Village Jandan Wala, Goniana Mandi,Bathinda - 151001, Dist. Bathinda - Punjab",
+       pincode:"150001",
+         state:"Punjab",
+     phone_num:"<b>08048548843</b>",
+         brand:"Basmati",
+       variety:"Medium Grain Rice",
+        weight:"min-5kg upto 25kg bag",
+     self_life:"1 year",
+
+    },
+
+    {
+        name:"Pongal Rice , PP Bag, 25kg",
+        price:"<b>₹32/</b>kg",
+        image:"https://5.imimg.com/data5/ZM/EK/AQ/SELLER-346460/pongal-rice-250x250.jpg",
+  product_dis:"Ponni rice from south india.", 
+      catagory:"rice",
+       
+   seller_name:"A.duraisamy Modern Rice Mill",
+  sell_address:"No. 4/354, Karia Perumal Karadu Road,, Nethimedu, Salem - 636002, Dist. Salem - Tamil Nadu",
+       pincode:"636002",
+         state:"T.N",
+     phone_num:"<b>08048765252</b>",
+         brand:"Pongal rice",
+       variety:"Medium Grain rice",
+        weight:"25kg",
+     self_life:"1.5years",
+
+    },
+    {
+        name:"Bliss Tree Ancient Grains Black Rice",
+        price:"<b>₹97/</b> Packet",
+        image:"https://5.imimg.com/data5/YC/DE/NX/SELLER-4351922/black-rice-kavuni-arisi-rs-97-250x250.jpg",
+  product_dis:"Ancient Grains Black Rice", 
+      catagory:"rice",
+       
+   seller_name:"Sri Velavan Agro",
+  sell_address:"6, Oil Mill Road, Ariyamangalam, Trichy,Tiruchirappalli - 620010, Dist. Tiruchirappalli - Tamil Nadu",
+       pincode:"636002",
+         state:"T.N",
+     phone_num:"<b>07971278020</b>",
+         brand:"Black rice",
+       variety:"Medium Grain Rice",
+        weight:"300gm",
+     self_life:"6 months",
+
+    },
+    {
+        name:"Indian Parmal Sella Rice , Packaging Size: 25 Kg, 1 Cm",
+        price:"<b>₹32/</b> Kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/2/TC/JI/MC/45981979/toilet-cleaner-250x250.jpg",
+  product_dis:"Parmal Sella Rice", 
+      catagory:"rice",
+       
+   seller_name:"Galaxy Enterprises",
+  sell_address:"541/2, Naya Bazar, Delhi, Lahori Gate, Delhi - 110006, Dist. Delhi - Delhi",
+       pincode:"110006",
+         state:"Delhi",
+     phone_num:"<b>08048969341</b>",
+         brand:"Parmal rice",
+       variety:"Long Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Golden SILKY RICE , Packet",
+        price:"<b>₹26/</b> Kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/5/VU/ES/OE/8806454/silk1-1-250x250.jpg",
+  product_dis:"Silky Rice", 
+      catagory:"rice",
+       
+   seller_name:"M/S. AL-HABIB INDUSTRIES",
+  sell_address:"39, Mohammad Habib Ali, Mujahar P.S.Road, Ruhini Pather, Nagaon,Dist. Hojai,  Guwahati - 782435, Dist. Kamrup - Assam",
+       pincode:"782435",
+         state:"Guwahati",
+     phone_num:"<b>08042974037</b>",
+         brand:"silky rice",
+       variety:"Medium Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Idli Rice , 2 kg (4.4lbs)",
+        price:"<b>₹159/</b> Pack",
+        image:"https://5.imimg.com/data5/KN/CS/MY-14442040/idli-rice-250x250.jpg",
+  product_dis:"idli rice", 
+      catagory:"rice",
+       
+   seller_name:"Manjilas Food Tech Private Limited",
+  sell_address:"T C-16-1382, Shastri Road, Thrissur -05,  Thrissur - 680005, Dist. Thrissur - Kerala",
+       pincode:"680005",
+         state:"Kerela",
+     phone_num:"<b>08048949442</b>",
+         brand:"Double Horse",
+       variety:"Long Range Rice",
+        weight:"2kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Golden Broken Rice , Packet",
+        price:"<b>₹17,000/</b> Ton",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/2/AT/LW/TC/70343428/whatsapp-image-2021-02-13-at-11-22-08-am-1--250x250.jpeg",
+  product_dis:"Golden Broken Rice", 
+      catagory:"rice",
+       
+   seller_name:"Jagatpati Online (opc) Private Limited",
+  sell_address:"39/6, Ram Krishna Road, Rishra, Kolkata - 712248, Dist. Kolkata, West Bengal",
+       pincode:"712248",
+         state:"Kolkata",
+     phone_num:"<b>08048836226</b>",
+         brand:"broken rie",
+       variety:"Medium Range Rice",
+        weight:"50kg",
+     self_life:"1.5years",
+
+    },
+    {
+        name:"Vardhans''s Delight HMT Rice , Packaging Type: PP Bag, Packaging Size: 25 Kg",
+        price:"<b>₹43/</b> Kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2020/8/YT/PM/NK/93814340/vardhans-s-delight-hmt-rice-250x250.jpg",
+  product_dis:"HMT rice", 
+      catagory:"rice",
+       
+   seller_name:"Sri Sai Traders",
+  sell_address:"10-1-88a, Lingojiguda, Karmanghat,  Hyderabad - 500079, Dist. Hyderabad, Telangana",
+       pincode:"500079",
+         state:"Telangana",
+     phone_num:"<b>080480045513</b>",
+         brand:"Vardhan s&s",
+       variety:"Short Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Loose 100% Broken Raw Rice , Packaging Type: PP Bag, Packaging Size: 50 kg",
+        price:"<b>₹22,000/</b> MT",
+        image:"https://5.imimg.com/data5/FD/BO/EM/SELLER-73518290/100-broken-rice-250x250.jpg",
+  product_dis:"Broken Raw Rice", 
+      catagory:"rice",
+       
+   seller_name:"Vertical Supports",
+  sell_address:"H.O 350, 1st Floor, Pocket 2, Sector E, Vasant Kunj,  New Delhi - 110070, Delhi",
+       pincode:"110070",
+         state:"Delhi",
+     phone_num:"<b>08048994961</b>",
+         brand:"loose",
+       variety:"Medium Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Indian N Private labels",
+        price:"<b>₹41.25/</b> Kg",
+        image:"https://4.imimg.com/data4/WA/BL/MY-5158094/ponni-par-boiled-250x250.jpg",
+  product_dis:"Ponni Par Boiled Rice,Packaging Size: 25 Kg", 
+      catagory:"rice",
+       
+   seller_name:"Mithuna Foods",
+  sell_address:"88/A Abdul Wahab Road, VandiMedu ; Redhills REDHILLS-600054., Rice Mills Mandy Red Hills., Chennai - 600101, Dist. Chennai, Tamil Nadu",
+       pincode:"600054",
+         state:"Tamil Nadu",
+     phone_num:"<b>08048807341</b>",
+         brand:"loose",
+       variety:"Mediun Range Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Mappillai Samba Rice , Packaging Size: 10-25 Kg",
+        price:"<b>₹70/</b> Kg",
+        image:"https://5.imimg.com/data5/MO/SL/MY-13537206/555555-250x250.jpg",
+  product_dis:"Sanba rice", 
+      catagory:"rice",
+       
+   seller_name:"ARM Orgaanics",
+  sell_address:"163, Kamarajar Salai, Kamarajar Salai, Madurai - 625009, Dist. Madurai, Tamil Nadu",
+       pincode:"625009",
+         state:"Tamil Nadu",
+     phone_num:"<b>08048989740</b>",
+         brand:"Mappillai samba rice",
+       variety:"Medium Grain Rice",
+        weight:"10 - 25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Gyco Elite Low GI Diabetic Brown Rice , PP Bag, Partial Polished",
+        price:"<b>₹99/</b> Kg",
+        image:"https://5.imimg.com/data5/IO/QZ/OF/SELLER-10449811/broken-brown-rice-250x250.jpeg",
+  product_dis:"Low GI Diabetic Brown Rice", 
+      catagory:"rice",
+       
+   seller_name:"Gyco Consumer Links",
+  sell_address:"No. 21/28, Cathedral Garden Road, Nungambakkam,  Chennai - 600034, Dist. Chennai, Tamil Nadu",
+       pincode:"600034",
+         state:"Tamil Nadu",
+     phone_num:"<b>08048923915</b>",
+         brand:"Brown Rice",
+       variety:"Medium Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Indian Ramarajyam Purple - Steam Sonamasoori Ponni Rice ",
+        price:"<b>₹42/</b> Kg",
+        image:"https://5.imimg.com/data5/XY/IJ/VA/SELLER-56234373/ramarajyam-purple-steam-sonamasoori-ponni-rice-250x250.jpg",
+  product_dis:"Steam Sonamasoori Ponni Rice", 
+      catagory:"rice",
+       
+   seller_name:"RMJ Modern Ricemill",
+  sell_address:"2/168, Alathur Road, Indiranagar, Thirumalpuram Post,  Madurai - 625014, Dist. Madurai, Tamil Nadu",
+       pincode:"625014",
+         state:"Tamil Nadu",
+     phone_num:"<b>08048729292</b>",
+         brand:"Sona Masoori rice",
+       variety:"Medium Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Bullet Star Silver Rice , Bag",
+        price:"<b>₹1,500/</b> Bag",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/8/YI/GZ/OD/60208805/bullet-brand-star-silver-rice-250x250.jpg",
+  product_dis:"Star Silver Rice", 
+      catagory:"rice",
+       
+   seller_name:"Kanchi Enterpries",
+  sell_address:"24, APMC Yard Chikballapur,  Chintamani - 563125, Dist. Kolar, Karnataka",
+       pincode:"563125",
+         state:"Karnataka",
+     phone_num:"<b>08048933648</b>",
+         brand:"Loose",
+       variety:"Short Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Madhuvan Sona Masoori Rice",
+        price:"<b>₹50/</b>kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2020/8/QE/KA/BB/14016408/whatsapp-image-2019-06-22-at-2-01-59-pm-7--250x250.jpeg",
+  product_dis:"Sona Masoori rice", 
+      catagory:"rice",
+       
+   seller_name:"Akshayam",
+  sell_address:"Building No. 6/1 YESHWANTHPUR, APMC Yard,  Bengaluru - 560022, Dist. Bengaluru, Karnataka",
+       pincode:"560022",
+         state:"Karnataka",
+     phone_num:"<b>08043045037</b>",
+         brand:"Loose",
+       variety:"Medium Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Indian 1121 Basmati Rice , Packet, 1kg",
+        price:"<b>₹63/</b> 1Kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/7/JO/IV/TF/127004348/indian-basmati-rice-250x250.jpg",
+  product_dis:"BASMATI RICE", 
+      catagory:"rice",
+       
+   seller_name:"Whitepantry",
+  sell_address:"301, Akashrup Apartment Satelite,  Ahmedabad - 380015, Dist. Ahmedabad - Gujarat",
+       pincode:"380015",
+         state:"Gujrat",
+     phone_num:"<b>08048930149</b>",
+         brand:"Tiaras Pantry",
+       variety:"Medium Grain Rice",
+        weight:"1 kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"Indian Thuyamalli Rice , High In Protein",
+        price:"<b>₹46/</b> Kg",
+        image:"https://5.imimg.com/data5/ANDROID/Default/2021/2/QD/IV/EH/118426384/product-jpeg-250x250.jpg",
+  product_dis:"Thuyamalli Rice", 
+      catagory:"rice",
+       
+   seller_name:"Gayatri Traders",
+  sell_address:"14B/2 sadayal street,theni,  Theni - 625531, Dist. Theni, Tamil Nadu",
+       pincode:"625531",
+         state:"Tamil Nadu",
+     phone_num:"<b>08048608359</b>",
+         brand:"Gayatri",
+       variety:"Short Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    {
+        name:"white-off white Blended Fortified Rice , PP bag",
+        price:"<b>₹60/</b> Kg",
+        image:"https://5.imimg.com/data5/SELLER/Default/2021/6/DC/VW/QC/14199337/nutritious-fortified-rice-250x250.jpg",
+  product_dis:"white Blended Fortified Rice", 
+      catagory:"rice",
+       
+   seller_name:"Arpan Agro Industries",
+  sell_address:"Samrala Road,  Khanna - 141401, Dist. Ludhiana - Punjab",
+       pincode:"141401",
+         state:"Punjab",
+     phone_num:"<b>08046036994</b>",
+         brand:"Arpan Agro",
+       variety:"Long Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    
+    {
+        name:"Hello Earth Black Rice",
+        price:"<b>₹70/</b> Kg",
+        image:"https://5.imimg.com/data5/AU/WQ/QA/SELLER-88885051/black-rice-250x250.jpg",
+  product_dis:" Black Rice Packaging Type: Plastic Bag, Packaging Size: 25 Kg", 
+      catagory:"rice",
+       
+   seller_name:"Hello Earth Organics A brand of Altus Peak Private...",
+  sell_address:"No. 26, 18th Cross, 22nd Main, Temple Street, Sarakki Kere, J P Nagar, 5th Phase,  Bengaluru - 560078, Dist. Bengaluru, Karnataka",
+       pincode:"560078",
+         state:"Karnataka",
+     phone_num:"<b>08048856010</b>",
+         brand:"Hello Earth",
+       variety:"Medium Grain Rice",
+        weight:"25kg",
+     self_life:"1 year",
+
+    },
+    
+];
+
+    let body = document.getElementById('cont');
+    let loc = document.getElementById("loc");
+    let h2 = document.createElement('h2');
+    h2.style.margin = '5% 1% -4%';
+
+
+    let container = document.createElement('div');
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = '37% 37% 37%';
+    container.style.gridGap = '1%';
+    container.style.margin = "3%";
+    // container.style.backgroundColor = "white";
+
+    console.log(h2);
+    let line1 = document.createElement('div');
+
+    line1.setAttribute("id", "line1");
+    
+    let imgloc = document.createElement("img");
+    imgloc.src="https://img.icons8.com/material-rounded/24/fa314a/place-marker.png";
+    imgloc.style.padding = "1% 1%";
+    imgloc.style.height = "16px";
+
+     let list = document.createElement('li');
+     list.style.listStyle = "none";
+     list.textContent= "Location";
+     list.style.color = 'grey';
+     list.style.textAlign = 'center';
+     list.style.margin = "1% -1%";
+
+     let input = document.createElement("input");
+     input.style.height = "23px";
+     input.style.width = "13%";
+     input.style.margin = ".5% 2%";
+     input.setAttribute("placeholder" , "Enter City");
+
+     let near = document.createElement('img');
+      near.src="https://img.icons8.com/officexs/16/000000/near-me.png";
+      near.style.padding = "1% 1%";
+      near.style.height = "16px";
+      near.style.margin = '0% -2%';
+
+    let nearme = document.createElement('p');
+    nearme.textContent = 'Near Me';
+    nearme.style.fontSize = '15px';
+    nearme.style.color = 'grey';
+    nearme.style.margin = '1.1% 1.3% -3%';
+    // nearme.style.border = '1px solid black';
+
+
+    let rigthcontent = document.createElement('li');
+    // let p = document.createElement('p');
+
+
+    rigthcontent.style.listStyle = 'none';
+    rigthcontent.style.margin = '1.3% 1.3% -3% ';
+    rigthcontent.textContent = "All India";
+    rigthcontent.style.fontSize = "15px";
+    // rigthcontent.style.display = "flex";
+    // rigthcontent.style.flexDirection = "row";
+    // p.setAttribute("id" , "city");
+    // p.style.display = 'inlineblock';
+    // p.innerHTML = "<p><p>Indore</p><p>Indore</p><span>Indore</span></p>";
+
+    // rigthcontent.append(p);
+
+    let city = document.createElement('li');
+
+    city.style.listStyle = 'none';
+    city.style.margin = '1.3% 1.3% -3% ';
+    city.textContent = "Indore";
+    city.style.fontSize = "13px";
+    city.style.color = "grey";
+
+    let city1 = document.createElement('li');
+
+    city1.style.listStyle = 'none';
+    city1.style.margin = '1.3% 1.3% -3% ';
+    city1.textContent = "Delhi";
+    city1.style.fontSize = "13px";
+    city1.style.color = "grey";
+
+    let city2 = document.createElement('li');
+
+    city2.style.listStyle = 'none';
+    city2.style.margin = '1.3% 1.3% -3% ';
+    city2.textContent = "Chennai";
+    city2.style.fontSize = "13px";
+    city2.style.color = "grey";
+
+    let city3 = document.createElement('li');
+
+    city3.style.listStyle = 'none';
+    city3.style.margin = '1.3% 1.3% -3% ';
+    city3.textContent = "Hyderabad";
+    city3.style.fontSize = "13px";
+    city3.style.color = "grey";
+
+    let city5 = document.createElement('li');
+
+    city5.style.listStyle = 'none';
+    city5.style.margin = '1.3% 1.3% -3% ';
+    city5.textContent = "bengaluru";
+    city5.style.fontSize = "13px";
+    city5.style.color = "grey";
+
+    let city6 = document.createElement('li');
+
+    city6.style.listStyle = 'none';
+    city6.style.margin = '1.3% 1.3% -3% ';
+    city6.textContent = "Mumbai";
+    city6.style.fontSize = "13px";
+    city6.style.color = "grey";
+
+    let city7 = document.createElement('li');
+
+    city7.style.listStyle = 'none';
+    city7.style.margin = '1.3% 1.3% -3% ';
+    city7.textContent = "Pune";
+    city7.style.fontSize = "13px";
+    city7.style.color = "grey";
+
+    let city8 = document.createElement('li');
+
+    city8.style.listStyle = 'none';
+    city8.style.margin = '1.3% 1.3% -3% ';
+    city8.textContent = "Ahmedabad";
+    city8.style.fontSize = "13px";
+    city8.style.color = "grey";
+
+    let city9 = document.createElement('li');
+
+    city9.style.listStyle = 'none';
+    city9.style.margin = '1.3% 1.3% -3% ';
+    city9.textContent = "Kolkata";
+    city9.style.fontSize = "13px";
+    city9.style.color = "grey";
+
+     line1.append(imgloc,list,input,near,nearme,rigthcontent,city,city1,city2,city3,city5,city6,city7,city8,city9);
+    loc.append(h2,line1);
+   body.append(container);
+   
+    // console.log(arr);
+    
+    let search_btn = document.getElementById('search-btn');
+    
+    search_btn.addEventListener('click',function(e){
+        e.preventDefault();
+        let upper = document.getElementById("upper");
+        let left = document.getElementById("left");
+
+        upper.style.visibility = "visible";
+        left.style.visibility = "visible";
+        container.innerHTML= null;
+        
+        let search = document.getElementById('search-bar');        
+        let str =  search.value;
+        console.log('str',str);
+        h2.innerHTML = str;
+
+        str = str.toLowerCase();
+
+        let count = 0;
+
+        data.forEach(function(product){
+
+            let to_check = product.name;
+            to_check = to_check.toLowerCase();
+            let arr = to_check.trim().split(' ');
+            console.log(arr);
+
+            if( arr.includes(str)){
+                count++;
+                showProduct(product);
+            }
+        }); 
+        
+        h2.innerHTML += ' ( ' + count + ' )';
+    })
+
+    
+
+    // h2.innerHTML 
+ 
+
+
+    function showProduct(product) {
+       
+        let div = document.createElement('div');
+        div.style.height = '520px';
+        // div.style.border = '1px solid black';
+        div.style.boxShadow.hover = '3px grey';
+        div.style.borderRadius = '3px';
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.style.alignItems = 'center';
+        div.style.backgroundColor = "white"
+
+        let img = document.createElement('img');
+        img.src = product.image;
+        img.style.width = '100%';
+        img.style.maxHeight = "232px"
+        img.style.margin = '20% 0%'
+        img.style.overflow = 'hidden';
+
+        let img_box = document.createElement('div');
+        img_box.style.borderRadius = '3px';
+        // img_box.style.border = '1px solid red';
+        img_box.style.height = '330px';
+        // img_box.style.width = "80%";
+        img_box.append(img);
+        // img_box.style.margin = 'auto';
+        img_box.addEventListener('click', function(){
+            newPage(product);
+        })
+        
+        let contentdiv = document.createElement('div');
+        // contentdiv.setAttribute()
+        contentdiv.style.height = '100px';
+        contentdiv.style.width = "100%";
+        contentdiv.style.margin = '-8%';
+        let name = document.createElement('a');
+        name.href = 'product-page.html';
+        name.innerHTML = product.name + ' ' ;
+        name.style.fontSize = '18px';
+        name.style.display = 'block';
+        name.style.textAlign = 'center';
+        name.style.textDecoration = 'none';
+
+        let price = document.createElement('p');
+        price.innerHTML = product.price;
+        price.style.textAlign = 'center'
+        price.style.margin = "1%"
+
+        let productdetails = document.createElement('p');
+        productdetails.innerHTML = product.product_dis;
+        productdetails.style.textAlign = 'center';
+        productdetails.style.display = 'block';
+
+        let call = document.createElement('mo');
+        call.innerHTML = "Call - " + product.phone_num;
+        call.style.display = 'block';
+        call.style.margin = '-2%';
+        call.style.textAlign = 'center';
+
+        contentdiv.append(name,price,productdetails,call);
+
+        let btn = document.createElement('button');
+        btn.innerHTML = 'Contact Supplier';
+        btn.style.padding = '4% 12%';
+        btn.style.borderRadius = '5px';
+        btn.style.backgroundColor = "#157972";
+        btn.style.cursor = 'pointer';
+        
+        // btn.style.boxSizing = 'border-box';
+        btn.style.color = "white";
+        btn.style.border = 'none';
+        // btn.style.display = 'justify-center';
+        // btn.style.margin = '26% 0%';
+        // btn.addEventListener('mousehover',changebutton);
+        // function changebutton(e){
+        //     e.style.padding = '5% 15%';
+        // }
+
+
+        btn.addEventListener('click', function(){
+            console.log('cart');
+            add_to_cart(product);
+        })
+
+        div.append(img_box,contentdiv,btn);
+
+        container.append(div);
+    }
+
+    function add_to_cart(product) {
+        
+        if( localStorage.getItem('cart') === null){
+            localStorage.setItem('cart', JSON.stringify([]))
+        }
+
+        let cart = JSON.parse(localStorage.getItem('cart'));
+
+        cart.push(product);
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+
+    function newPage(product) {
+        localStorage.setItem('item', JSON.stringify(product));
+        window.location.href = 'product-page.html'
+    }
+</script>

@@ -124,7 +124,7 @@
                 <input type="text" placeholder="Please enter GST number to reach mores sellers.">
             </form>
             <button class="btn" onclick="next()">Next</button>
-            <button type="reset"  class="btn">Reset</button>
+            <button type="reset"  class="btn" id='reset'>Reset</button>
         </div>
     </div>
 </body>
@@ -137,5 +137,12 @@
 
     function next(){
         window.location.href="thankyou.html"
+    }
+
+    let reset_btn = document.getElementById('reset');
+    reset_btn.addEventListener('click', reset)
+
+    function reset(){
+        window.location.href = 'user_input_page.html';
     }
 </script>

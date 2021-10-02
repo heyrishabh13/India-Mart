@@ -90,12 +90,15 @@
         font-size: 14px;
         color: #424242 ;
       }
-      h6{
-        margin: auto;
-        padding-left: 1100px;
-        font-size: 15px;
+     
+      button {
+        margin-left: 80%;
+        margin-top: 5px;
         font-family: Arial, Helvetica, sans-serif;
-        color: #1565C0;
+        color: white;
+        background-color: #00a699;
+        border-radius: 5px;
+        border: 1px dashed black;
       }
 
     </style>
@@ -106,7 +109,9 @@
     <div id="container">
       <div id="outerbox">
         <div id="upperbox"></div>
-        <div id="lowerbox"></div>
+        <div id="lowerbox">
+          <a href="pay.html"><button>Pay Now</button></a>
+        </div>
       </div>
     </div>
 </body>
@@ -158,13 +163,11 @@
     
     let sellers_gst_no = document.createElement("h5");
     sellers_gst_no.textContent = product.gst;
-
-    let pay_option = document.createElement("h6");
-    pay_option.textContent = "Pay Now";
-
-    div2.append(sellers_name,sellers_address, sellers_contact, sellers_gst_no, pay_option);
+    div2.append(sellers_name,sellers_address, sellers_contact, sellers_gst_no);
 
     parent2.append(div1, div2);
+
+  
     //parent1.append(parent2);
 });
 }

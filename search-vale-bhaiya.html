@@ -915,9 +915,18 @@
     // console.log(arr);
     
     let search_btn = document.getElementById('search-btn');
+
+    if(localStorage.getItem('search') != null){
+        search_func();
+    }
+
     
     search_btn.addEventListener('click',function(e){
         e.preventDefault();
+       search_func();
+    })
+
+    function search_func(){
         let upper = document.getElementById("upper");
         let left = document.getElementById("left");
 
@@ -926,7 +935,11 @@
         container.innerHTML= null;
         
         let search = document.getElementById('search-bar');        
-        let str =  search.value;
+        if(search.value != ''){
+            localStorage.setItem('search',JSON.stringify(search.value));
+        };
+
+        str = JSON.parse(localStorage.getItem('search'));
         console.log('str',str);
         h2.innerHTML = str;
 
@@ -948,9 +961,7 @@
         }); 
         
         h2.innerHTML += ' ( ' + count + ' )';
-    })
-
-    
+    }
 
     // h2.innerHTML 
  

@@ -66,7 +66,7 @@ Disposable Cap
             border-radius: 5px 0 0 5px;
         }
 
-        #searchbar {
+        #search-bar {
             width: 307px;
             height: 30px;
             margin: 2.3% -1px;
@@ -540,9 +540,9 @@ Disposable Cap
                     <h1> All India </h1>
                 </div>
                 <div id="cam">
-                    <input type="text" placeholder="Enter product/service to search" id="searchbar" />
+                    <input type="text" placeholder="Enter product/service to search" id="searchbar"  value=''/>
                     <img id="mic" src="https://img.icons8.com/material-rounded/24/000000/microphone.png" />
-                    <button class="search-button"><img
+                    <button class="search-button" id='search-btn'><img
                             src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" />
                         <span style="margin: 6% 6%" class="search-text">Search</span></button>
                 </div>
@@ -576,8 +576,8 @@ Disposable Cap
         <div id="back">
             <div class="backbox">
                 <h2>Tell us what you Need</h2>
-                <input type="text" placeholder="Enter Product/Service Name" id="tellusinput">
-                <button class="submit-back">Submit Requirement</button>
+                <input type="text" placeholder="Enter Product/Service Name" id="tellusinput" value=''>
+                <button class="submit-back" id='tell-us-btn'>Submit Requirement</button>
                 <hr style="margin: 0% 25%;">
                 <h3 style="margin: 2% 30%; color: rgb(62, 71, 80);">You may be looking to buy</h3>
             </div>
@@ -1414,6 +1414,30 @@ Disposable Cap
 </html>
 
 <script>
-    let nice = document.getElementsByClassName("nice")
-    console.log('nice:', nice)
+
+    let search_btn = document.getElementById('search-btn');
+    let search = document.getElementById('searchbar');
+    let tell_us = document.getElementById('tellusinput');
+    let tell_us_btn = document.getElementById('tell-us-btn')
+    
+    tell_us_btn.addEventListener('click',function(){
+        goto_search_page(tell_us);
+    })
+    search_btn.addEventListener('click', function(){
+        goto_search_page(search);
+    });
+    
+
+    function goto_search_page(str){
+        
+            localStorage.setItem('search',JSON.stringify(str.value))
+        
+        window.location.href = 'search-vale-bhaiya.html';
+    }
+
+    
+
+    
+  
+
 </script>

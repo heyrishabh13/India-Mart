@@ -1003,7 +1003,10 @@
         contentdiv.style.width = "100%";
         contentdiv.style.margin = '-8%';
         let name = document.createElement('a');
-        name.href = 'product-page.html';
+        name.addEventListener('click', function(){
+            add_item(product);
+        })
+        name.href = 'product_discription.html'
         name.innerHTML = product.name + ' ' ;
         name.style.fontSize = '18px';
         name.style.display = 'block';
@@ -1049,6 +1052,12 @@
         btn.addEventListener('click', function(){
             console.log('cart');
             add_to_cart(product);
+            
+            window.location.href = 'user_input_page.html';
+            localStorage.setItem('item', JSON.stringify(product));
+        })
+
+        btn.addEventListener('click', function(){
         })
 
         div.append(img_box,contentdiv,btn);
@@ -1069,6 +1078,9 @@
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
+    function add_item(product){
+        localStorage.setItem('item',JSON.stringify(product));
+    }
 
     function newPage(product) {
         localStorage.setItem('item', JSON.stringify(product));

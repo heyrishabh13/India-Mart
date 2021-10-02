@@ -224,7 +224,7 @@
                 <div id="btn_box">
                     <h4 style="margin-left: 100px;margin-top: 5px;">Fill quantity to get Latest Price</h4>
                     <input type="number" style="width:80px;height: 30px; margin-left:150px;"><select style="width:70px;height: 35px;"><option value="kg">in kg</option><option value="quintal">in Q.T</option></select><br>
-                    <button class="btn"><ul style="font-size: 18px;">Get Latest Price</ul><ul style="margin-left: 18px; margin-top:-20px" >Request a quote</ul></button>
+                    <button class="btn" id='btn'><ul style="font-size: 18px;">Get Latest Price</ul><ul style="margin-left: 18px; margin-top:-20px" >Request a quote</ul></button>
                 </div>
                 
             </div>
@@ -329,7 +329,7 @@ console.log("cart:",prod_dis.image);
         pnam.textContent=prod_dis.name;
 
         let rate = document.getElementById("price");
-        rate.textContent=prod_dis.price;
+        rate.innerHTML=prod_dis.price;
         
         let snam= document.getElementById("sname");
         snam.textContent=prod_dis.seller_name;
@@ -363,6 +363,13 @@ console.log("cart:",prod_dis.image);
 
     disp();
 
+    let supplier_btn = document.getElementById('btn');
     
+    btn.addEventListener('click', userInputPage)
+    
+
+    function userInputPage(){
+        window.location.href = 'user_input_page.html';
+    }
 
 </script>

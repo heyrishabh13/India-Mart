@@ -136,6 +136,23 @@
     img.src = item.image;
 
     function next(){
+        
+        if( localStorage.getItem('cart') === null){
+            localStorage.setItem('cart', JSON.stringify([]))
+        }
+
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        let found = 1;
+        cart.forEach(function(el){
+            if(el.name === item.name){
+                found = 0;
+            }
+        })
+        if(found)
+            cart.push(item);
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    
         window.location.href="thankyou.html"
     }
 

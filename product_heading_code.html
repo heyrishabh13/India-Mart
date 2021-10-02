@@ -1,0 +1,15 @@
+let product_name = document.createElement("p");
+
+product_name.textContent = product.name;
+product_name.setAttribute("id","hrf");
+product_name.onclick = function (){
+    makeChange(product);
+}
+
+function  makeChange(prod){
+    let products_cart = JSON.parse(localStorage.getItem("myorder"));
+    products_cart = prod;
+    localStorage.setItem("myorder",JSON.stringify(products_cart));
+    console.log("products_cart:",products_cart);
+    window.location.href="prod_description.html";
+}

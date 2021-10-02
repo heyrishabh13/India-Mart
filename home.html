@@ -526,6 +526,114 @@ Disposable Cap
          display: grid;
          gap: 150px;
         }
+        .hov:hover li:nth-child(odd) {
+            border-radius: 80% 80% 2% 2%;
+            transform-origin: top;
+            transform: perspective(350px) rotateX(0deg);
+            margin-top: -1;
+        }
+
+        .hov:hover li:nth-child(even) {
+            border-radius: 80% 80% 2% 2%;
+            transform-origin: bottom;
+            transform: perspective(3000px) ;
+            margin-top: 0;
+        }
+
+        .hov2 li:first-child {
+            margin-top: 0;
+        }
+
+        .hov {
+            position: relative;
+            height: 40px;
+            width: 112px;
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            font-family: Helvetica;
+            font-weight: bold;
+            text-align: center;
+            list-style: none;
+            z-index: 2;
+
+        }
+
+        ul,
+        li {
+            margin: 2px;
+            padding: 0;
+        }
+
+        .hov2 {
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        .hov2 li {
+            list-style: none;
+            background:#19a598;
+            color: white;
+            width: 100px;
+            padding: 1 5px;
+            text-align: left;
+            line-height: 30px;
+            transition: all .7s ease-in;
+
+        }
+
+        .hov2 li:nth-child(odd) {
+
+            transform-origin: top;
+            transform: perspective(350px) rotateX(-90deg);
+        }
+
+        .hov2 li:nth-child(even) {
+            margin-top: -65px;
+            transform-origin: bottom;
+            transform: perspective(350px) rotateX(90deg);
+        }
+        footer{
+            margin-top: 10%;
+        }
+        #fhead{
+            width:100%;
+            height: 50px;
+            
+        }
+        #fhead>p{
+            margin-left: 5%;
+            color: rgb(0, 153, 255);
+            font-size: 16px;
+        }
+        #fmain{
+            padding: 4px;
+            width:100%;
+            height: 140px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #fmain>div>p,h3{
+            margin-top: -10px;
+            color: black;
+        }
+        #fmain>div>p,h3:hover,#fmain>div>p,h3:focus{
+            cursor: pointer;            
+        }
+        #ffoot{
+            width:100%;
+            height: 40px;
+            justify-content: space-around;
+        }
+        #ffoot>p{margin-left: 5%;}
+        .dv{
+            width:20%;
+            text-align: left;
+            margin-left: 50px;
+        }
+        /* span{
+            margin-left: 100px;
+        } */
     </style>
 </head>
 
@@ -568,7 +676,14 @@ Disposable Cap
                         <span>Messages</span>
                     </div>
                     <div><img class="sign" src="https://img.icons8.com/windows/32/ffffff/user.png" height="23px" />
-                        <span>Sign in</span>
+                        <span class="hov">Registration
+                            <ul class="hov2">
+                                <li></li>
+                                <li>Sign Up</li>
+                                <li>Sign In</li>
+                                <li>My Order</li>
+                            </ul>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -647,7 +762,7 @@ Disposable Cap
                             <img src="https://hm.imimg.com/imhome_gifs/cvid02.png" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Face Mask</li>
 
                             <li class="nice">3 Ply Face Mask</li>
@@ -666,7 +781,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Oxygen Supplies</li>
 
                             <li class=nice> Oxygen Cylinder</li>
@@ -694,7 +809,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Medical Mask</li>
 
                             <li class=nice> CRP Mask</li>
@@ -719,7 +834,7 @@ Disposable Cap
                             <img src="https://hm.imimg.com/imhome_gifs/cvid03.png" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Surgical Gloves</li>
 
                             <li class=nice>Nitriles Gloves</li>
@@ -736,7 +851,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Surgical Caps</li>
 
                             <li class=nice>Bouffant Caps</li>
@@ -755,7 +870,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Personal Protective Equipment</li>
 
                             <li class=nice>Hazmat Suit</li>
@@ -802,7 +917,7 @@ Disposable Cap
                             <img src="https://5.imimg.com/data5/KT/MJ/MY-16675294/pharmaceutical-drug-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Pharmaceutical Drug</li>
 
                             <li class="nice">Tocilizumab</li>
@@ -823,7 +938,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Nutraceuticals </li>
 
                             <li class=nice> Zinc Sulphate Tablets</li>
@@ -851,7 +966,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -5%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Fitness Supplements </li>
 
                             <li class=nice> Weight Gain Nutrition</li>
@@ -873,7 +988,7 @@ Disposable Cap
                             <img src="https://3.imimg.com/data3/BA/YT/MY-2018319/multidisciplinary-care-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -6%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1"> Medical Treatment Services</li>
 
                             <li class=nice>Dental Treatment Services</li>
@@ -894,7 +1009,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Medical Test Services   </li>
 
                             <li class=nice>CT Scan Services</li>
@@ -915,7 +1030,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">PCD Pharma Franchise </li>
 
                             <li class=nice>Pharma Franchise</li>
@@ -958,7 +1073,7 @@ Disposable Cap
                             <img src="https://3.imimg.com/data3/IS/MS/GLADMIN-105901/rice-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Rice </li>
 
                             <li class="nice">Basmati Rice</li>
@@ -977,7 +1092,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">
                                 Fresh Vegetables</li>
 
@@ -1001,7 +1116,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Whole Spices </li>
 
                             <li class=nice> Green Cardamom</li>
@@ -1023,7 +1138,7 @@ Disposable Cap
                             <img src="https://5.imimg.com/data5/OP/LS/MY-1393371/mono-potassium-phosphate-foliar-fertilizers-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Fertilizer </li>
 
                             <li class=nice>Organic Fertilizers</li>
@@ -1044,7 +1159,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Agricultural Tools</li>
 
                             <li class=nice>Agricultural Sprayers</li>
@@ -1063,7 +1178,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Agricultural Machinery </li>
 
                             <li class=nice>Power Weeder</li>
@@ -1106,7 +1221,7 @@ Disposable Cap
                             <img src="https://3.imimg.com/data3/EK/BM/GLADMIN-2296/mens-t-shirts-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Mens T-Shirts </li>
 
                             <li class="nice">Mens Round Neck T Shirt</li>
@@ -1123,7 +1238,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Blazers </li>
 
                             <li class=nice>Mens Blazer</li>
@@ -1142,7 +1257,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">
                                 Safety Shoes</li>
 
@@ -1160,7 +1275,7 @@ Disposable Cap
                             <img src="https://3.imimg.com/data3/MM/IB/GLADMIN-2576/trouser-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Trouser</li>
 
                             <li class=nice>Cargo Pant</li>
@@ -1179,7 +1294,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Shirt</li>
 
                             <li class=nice>Printed Shirt</li>
@@ -1198,7 +1313,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">synthetic Febrics</li>
                             <li class="nice">Rayon Febrics</li>
 
@@ -1215,7 +1330,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Ladies Kurtis</li>
 
                             <li class=nice>Designer Kurtis</li>
@@ -1232,7 +1347,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Mannequins</li>
 
                             <li class=nice>Female Mannequins</li>
@@ -1270,7 +1385,7 @@ Disposable Cap
                             <img src="https://5.imimg.com/data5/LQ/TI/FF/GLADMIN-3061/purell-advanced-hand-sanitizer-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Hand Sanitizer </li>
 
                             <li class="nice">Alcohol Based Hand Sanitizer</li>
@@ -1291,7 +1406,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Tissue Paper </li>
 
                             <li class=nice>Toilet Paper Roll</li>
@@ -1307,10 +1422,6 @@ Disposable Cap
 
 
                             <li class=nice>Wet Wipes</li>
-
-
-                            
-
                         </ul>
                     </ul>
                     <ul class="img-2">
@@ -1319,7 +1430,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Hand Soap </li>
 
                             <li class=nice> Liquid Hand Wash</li>
@@ -1344,7 +1455,7 @@ Disposable Cap
                             <img src="https://5.imimg.com/data5/WP/ZE/XX/ANDROID-22468/product-jpeg-125x125.jpg" style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Mops </li>
 
                             <li class=nice> Cotton Mop</li>
@@ -1364,7 +1475,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -7%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Garbage Bags
                                 Disposable Garbage Bags</li>
 
@@ -1384,7 +1495,7 @@ Disposable Cap
                                 style="display: block;">
                         </li>
 
-                        <ul style="overflow: hidden; margin: 0% -10%;">
+                        <ul style="overflow: hidden; margin: 0% 7%;">
                             <li class="nice1">Cleaning Liquids & Wipes</li>
 
                             <li class=nice>Phenyl</li>
@@ -1408,7 +1519,48 @@ Disposable Cap
         
      </div>
     </div>
-    </div>
+    <footer>
+        <div id="fhead"><p>We are here to help you!</p><hr></div>
+        <div id="fmain">
+            <div id="dv1" class="dv">
+                <p>About Us</p>
+                <p>Join Sales</p>
+                <p>Sucess Stories</p>
+                <p>Press Section</p>
+                <p>Advertise with Us</p>
+                <p>Investor Sector</p>
+            </div>
+            <div id="dv2" class="dv">
+                <p>Help</p>
+                <p>Feedback</p>
+                <p>Complaints</p>
+                <p>Customer Care</p>
+                <p>Jobs & Careers</p>
+                <p>Contact Us</p>
+            </div>
+            <div id="dv3" class="dv">
+                <h3>Suppliers Tool Kit</h3>
+                <p>Sell on indiaMART</p>
+                <p>Latest Buylead</p>
+                <p>Learning Center</p>
+            </div>
+            <div id="dv4" class="dv">
+                <h3>Buyers Tool Kit</h3>
+                <p>Post your requirements</p>
+                <p>Products you Buy</p>
+                <p>Search Products and Suppliers</p>
+                <p>Pay with indiaMART</p>
+            </div>
+            <div id="dv5" class="dv">
+                <h3>Events</h3>
+                <p>Trade Shows</p>
+                <p>Conferences</p>
+                <p>Events by Country</p>
+            </div>
+        </div>
+        <div id="ffoot"><hr><p>Copyright © 1996-2021 IndiaMART InterMESH Ltd. All rights reserved.<span>Terms of Use - Privacy Policy - Link to Us</span></p></div>
+    </footer>
+    
 </body>
 
 </html>

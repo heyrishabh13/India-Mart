@@ -162,14 +162,17 @@ transform: translate(-50%,-50%) scale(1);
     let arr = JSON.parse(localStorage.getItem("users"));
     //console.log(all_others); 
 
+      let found = 1;
       arr.forEach(function(el) {
       if(email === el.email  &&  password === el.password) {
+        found = 0;
         window.location.href = 'home.html';
       }
-      else{
-        alert('Invalid email and password');
-      }
+      
+      
     });
-
+    if(found){
+      alert('Invalid password')
+    }
   }
 </script>

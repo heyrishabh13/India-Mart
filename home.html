@@ -679,7 +679,7 @@ Disposable Cap
                         <span class="hov">Registration
                             <ul class="hov2">
                                 <li></li>
-                                <li>Sign Up</li>
+                                <li><a href="signup.html">Sign Up</a></li>
                                 <li>Sign In</li>
                                 <li>My Order</li>
                             </ul>
@@ -1588,8 +1588,15 @@ Disposable Cap
     }
 
     
+    let singup = document.getElementById('singup');
+    singup.addEventListener('click',function(){
+        singup.style.color = 'black';    
+    })
+    console.log('hell');
 
-    
+    function singup_func(){
+        window.location.href = 'thankyou.html'
+    }
   
 
 </script>

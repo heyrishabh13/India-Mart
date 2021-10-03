@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Orders</title>
 
     <style>
       #container {
@@ -212,6 +212,9 @@
     pay_option.setAttribute("id","btn");
     pay_option.textContent = "Pay Now";
     
+    let hr = document.createElement("hr");
+    hr.style.margin = "2% 30%";
+
     // pay_option.style.alignContent = "right";
     pay_option.addEventListener('click', payNow);
     
@@ -220,7 +223,7 @@
     
 
     
-    div2.append(div3, pay_option);
+    div2.append(div3, pay_option ,hr);
 
     div1.append(product_name, product_price, product_size, product_brand, product_color, product_desire,div2  );
 

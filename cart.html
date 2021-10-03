@@ -8,20 +8,25 @@
 
     <style>
       #container {
-        margin: 0.5% 7%;
+        margin: 0.5% 7% 6%;
         border: 1px solid white;
         background-color: white;
+        box-shadow: 10px 20px;
+        border-radius: 10px;
             
       }
       body{
-        background-color: #ECEFF1;
+        background-color: #d0d6db;
       }
       h1{
         padding: 1%;
-        margin: 1% 6%;
-        background-color: white;
+        margin: -1% -1% 0%;
+        background-color:rgb(56, 203, 223);
         color: blue;
-        width: 20%;
+        
+        font-size: 20px;
+        border-radius: 10px 10px 100px 5px;
+        width: 10%;
       }
       #outerbox{
         width: 95%;
@@ -30,7 +35,7 @@
         margin-left: 29px;
         margin-right: 29px;
         border-radius: 15px;
-        border: 1px solid #CFD8DC;
+        border: 1px solid #277799;
       }
       .upperbox{
         border-radius: 15px;
@@ -41,10 +46,11 @@
       }
 
       .lowerbox{
-        border-radius: 15px;
+        border-radius: 20px;
         height: 150px;
         margin: auto;
-        background-color: white;
+        /* box-shadow: 10px black; */
+        background-color: rgb(168, 32, 32);
       }
       h3 {
         margin: auto;
@@ -99,6 +105,27 @@
         font-family: Arial, Helvetica, sans-serif;
         color: #1565C0;
       }
+      #btn{
+        background-color: rgb(10, 132, 136);
+        align-content: center;
+        border: none;
+        width: 100px;
+        height: 30px;
+        margin: 1% 15%;
+      }
+       #details{
+            /* display: block;
+            box-shadow: 30px black; */
+            width: max-content;
+            overflow-y: hidden;
+             transition-property: all;
+             transition-duration: .5s;
+             max-height: 100px;
+             transition-timing-function: cubic-bezier(0,1,.5,1);
+      }  
+      #details.closed{
+        max-height:0 ;
+      }
 
     </style>
 </head>
@@ -107,6 +134,7 @@
 
     <div id="container">
       <div id="outerbox">
+    
       </div>
     </div>
 </body>
@@ -160,15 +188,27 @@
     let sellers_contact = document.createElement("h5");
     sellers_contact.textContent = product.phone_num;
     
+    // let sellerbtn = document.createElement("button");
+    // sellerbtn.addEventListener("onclick", details)
     let div3 = document.createElement('div');
+    div3.setAttribute("id", "details")
+    // document.getElementById()
+    
 
+    
+  
+
+     
     let pay_option = document.createElement("button");
+    pay_option.setAttribute("id","btn");
     pay_option.textContent = "Pay Now";
     pay_option.addEventListener('click', payNow);
     
     
     div3.append(sellers_name,sellers_address, sellers_contact);
+    
 
+    
     div2.append(div3, pay_option);
 
     div1.append(product_name, product_price, product_size, product_brand, product_color, product_desire,div2  );
@@ -178,6 +218,9 @@
 });
 }
 showProducts();
+
+
+
 
 
 function payNow(){

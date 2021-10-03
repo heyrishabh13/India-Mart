@@ -114,17 +114,20 @@
         margin: 1% 15%;
       }
        #details{
-            /* display: block;
-            box-shadow: 30px black; */
-            width: max-content;
-            overflow-y: hidden;
+            /* /* display: block; */
+            box-shadow: 30px; 
+            width: 550px;
+            border-radius: 81px 81px 81px 81px;
+            display: inline-block;
+            background-color:darkgrey;
+            overflow-x:hidden ;
              transition-property: all;
              transition-duration: .5s;
-             max-height: 100px;
+             max-height:auto;
              transition-timing-function: cubic-bezier(0,1,.5,1);
       }  
       #details.closed{
-        max-height:0 ;
+        max-height:auto ;
       }
 
     </style>
@@ -156,6 +159,7 @@
       
     let div1 = document.createElement('div')
     div1.style.class = 'upperbox';
+    // div1.style.display = "flex";
     let div2 = document.createElement('div')
     div2.style.class = 'lowerbox';
 
@@ -178,6 +182,11 @@
     product_desire.textContent = "I am interested in buying " + product.name;
     
    
+
+    let heading = document.createElement("h2");
+    heading.textContent = "Seller Details";
+    heading.style.textAlign= "center";
+    heading.style.marginBottom = '-2%';
 
     let sellers_name = document.createElement("h2");
     sellers_name.textContent =  product.seller_name;
@@ -202,10 +211,12 @@
     let pay_option = document.createElement("button");
     pay_option.setAttribute("id","btn");
     pay_option.textContent = "Pay Now";
+    
+    // pay_option.style.alignContent = "right";
     pay_option.addEventListener('click', payNow);
     
     
-    div3.append(sellers_name,sellers_address, sellers_contact);
+    div3.append(heading,sellers_name,sellers_address, sellers_contact);
     
 
     

@@ -123,9 +123,13 @@ transform: translate(-50%,-50%) scale(1);
     <div class="content" id="input">
         <div class="close-btn" onclick="togglePopup()">X</div>
         <h1>Join IndiaMART for Free</h1> 
-        <h2>Name</h2>
+        <h2>First Name</h2>
         <div class="input-field" >
-            <input id="users_name" type="text" placeholder="Enter Your Name" class="validate" />
+            <input id="users_fname" type="text" placeholder="Enter Your first Name" class="validate" />
+        </div>
+        <h2>Last Name</h2>
+        <div class="input-field" >
+            <input id="users_lname" type="text" placeholder="Enter Your last Name" class="validate" />
         </div>
         <h2>Email</h2>
         <div class="input-field" >
@@ -160,8 +164,10 @@ transform: translate(-50%,-50%) scale(1);
 
     function signup(e) {
         e.preventDefault();
-        let users_name = document.getElementById("users_name");
-        let name = users_name.value;
+        let users_fname = document.getElementById("users_fname");
+        let fname = users_fname.value;
+        let users_lname = document.getElementById("users_lname");
+        let lname = users_lname.value;
         let users_email = document.getElementById("users_email");
         let email = users_email.value;
         let users_password = document.getElementById("users_password");
@@ -174,22 +180,32 @@ transform: translate(-50%,-50%) scale(1);
         // console.log("name:",number);
 
 
-        if(localStorage.getItem('others') === null) {
-            localStorage.setItem('others', JSON.stringify([]));
+        if(localStorage.getItem('users') === null) {
+            localStorage.setItem('users', JSON.stringify([]));
         }
 
-        let other = {
-            name,
+        let user = {
+            fname,
+            lname,
             email,
             password,
             number
         }
 
-        let arr = JSON.parse(localStorage.getItem("others"));
-        arr.push(other);
-        localStorage.setItem("others", JSON.stringify(arr));
+        let arr = JSON.parse(localStorage.getItem("users"));
+        let found = 1;
+        arr.forEach(function(el){
+            if(el.email === user.email){
+                found = 0;
+            }
+        })
+        if(found){
+            arr.push(user);
+            localStorage.setItem('fname', JSON.stringify(user.fname));
+        }
+        localStorage.setItem("users", JSON.stringify(arr));
 
-
+        window.location.href = 'signin.html';
         
     }
 

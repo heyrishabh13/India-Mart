@@ -1,4 +1,4 @@
-let body = document.getElementById('cont');
+    let body = document.getElementById('cont');
     let loc = document.getElementById("loc");
     let h2 = document.createElement('h2');
     h2.style.margin = '5% 1% -4%';
@@ -9,7 +9,6 @@ let body = document.getElementById('cont');
     container.style.gridTemplateColumns = '37% 37% 37%';
     container.style.gridGap = '1%';
     container.style.margin = "3%";
-    // container.style.backgroundColor = "white";
 
     console.log(h2);
     let line1 = document.createElement('div');
@@ -21,48 +20,35 @@ let body = document.getElementById('cont');
     imgloc.style.padding = "1% 1%";
     imgloc.style.height = "16px";
 
-     let list = document.createElement('li');
-     list.style.listStyle = "none";
-     list.textContent= "Location";
-     list.style.color = 'grey';
-     list.style.textAlign = 'center';
-     list.style.margin = "1% -1%";
-
-     let input = document.createElement("input");
-     input.style.height = "23px";
-     input.style.width = "13%";
-     input.style.margin = ".5% 2%";
-     input.setAttribute("placeholder" , "Enter City");
-
-     let near = document.createElement('img');
-      near.src="https://img.icons8.com/officexs/16/000000/near-me.png";
-      near.style.padding = "1% 1%";
-      near.style.height = "16px";
-      near.style.margin = '0% -2%';
+    let list = document.createElement('li');
+    list.style.listStyle = "none";
+    list.textContent= "Location";
+    list.style.color = 'grey';
+    list.style.textAlign = 'center';
+    list.style.margin = "1% -1%";
+    let input = document.createElement("input");
+    input.style.height = "23px";
+    input.style.width = "13%";
+    input.style.margin = ".5% 2%";
+    input.setAttribute("placeholder" , "Enter City");
+    let near = document.createElement('img');
+    near.src="https://img.icons8.com/officexs/16/000000/near-me.png";
+    near.style.padding = "1% 1%";
+    near.style.height = "16px";
+    near.style.margin = '0% -2%';
 
     let nearme = document.createElement('p');
     nearme.textContent = 'Near Me';
     nearme.style.fontSize = '15px';
     nearme.style.color = 'grey';
     nearme.style.margin = '1.1% 1.3% -3%';
-    // nearme.style.border = '1px solid black';
-
-
+    
     let rigthcontent = document.createElement('li');
-    // let p = document.createElement('p');
-
 
     rigthcontent.style.listStyle = 'none';
     rigthcontent.style.margin = '1.3% 1.3% -3% ';
     rigthcontent.textContent = "All India";
     rigthcontent.style.fontSize = "15px";
-    // rigthcontent.style.display = "flex";
-    // rigthcontent.style.flexDirection = "row";
-    // p.setAttribute("id" , "city");
-    // p.style.display = 'inlineblock';
-    // p.innerHTML = "<p><p>Indore</p><p>Indore</p><span>Indore</span></p>";
-
-    // rigthcontent.append(p);
 
     let city = document.createElement('li');
 
@@ -136,11 +122,9 @@ let body = document.getElementById('cont');
     city9.style.fontSize = "13px";
     city9.style.color = "grey";
 
-     line1.append(imgloc,list,input,near,nearme,rigthcontent,city,city1,city2,city3,city5,city6,city7,city8,city9);
+    line1.append(imgloc,list,input,near,nearme,rigthcontent,city,city1,city2,city3,city5,city6,city7,city8,city9);
     loc.append(h2,line1);
-   body.append(container);
-   
-    // console.log(arr);
+    body.append(container);
     
     let search_btn = document.getElementById('search-btn');
 
@@ -214,17 +198,13 @@ let body = document.getElementById('cont');
 
         let img_box = document.createElement('div');
         img_box.style.borderRadius = '3px';
-        // img_box.style.border = '1px solid red';
         img_box.style.height = '330px';
-        // img_box.style.width = "80%";
         img_box.append(img);
-        // img_box.style.margin = 'auto';
         img_box.addEventListener('click', function(){
             newPage(product);
         })
         
         let contentdiv = document.createElement('div');
-        // contentdiv.setAttribute()
         contentdiv.style.height = '100px';
         contentdiv.style.width = "100%";
         contentdiv.style.margin = '-8%';

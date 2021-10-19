@@ -232,7 +232,7 @@ let body = document.getElementById('cont');
         name.addEventListener('click', function(){
             add_item(product);
         })
-        name.href = 'html/product-discription.html'
+        name.href = 'product-discription.html'
         name.innerHTML = product.name + ' ' ;
         name.style.fontSize = '18px';
         name.style.display = 'block';
@@ -270,7 +270,7 @@ let body = document.getElementById('cont');
 
         btn.addEventListener('click', function(){
             
-            window.location.href = 'user_input_page.html';
+            window.location.href = 'user-input-page.html';
             localStorage.setItem('item', JSON.stringify(product));
         })
 
@@ -290,5 +290,5 @@ let body = document.getElementById('cont');
 
     function newPage(product) {
         localStorage.setItem('item', JSON.stringify(product));
-        window.location.href = 'html/product-discription.html'
+        window.location.href = 'product-discription.html'
     }

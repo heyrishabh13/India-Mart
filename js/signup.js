@@ -3,7 +3,7 @@
     .classList.toggle("active");
    // }
 
-   function signUp(e) {
+   function signup(e) {
        e.preventDefault();
        let users_fname = document.getElementById("users_fname");
        let fname = users_fname.value;
@@ -41,6 +41,6 @@
        }
        localStorage.setItem("users", JSON.stringify(arr));
 
-       window.location.href = 'html/signin.html';
+       window.location.href = 'signin.html';
        
    }

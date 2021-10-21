@@ -19,7 +19,7 @@ let data=[
     },
 
     {
-        name:"Pongal Rice, PP Bag, 25kg",
+        name:"Pongal Rice PP Bag 25kg",
         price:"Rs 32/kg",
         image:"https://5.imimg.com/data5/ZM/EK/AQ/SELLER-346460/pongal-rice-250x250.jpg",
   product_dis:"Ponni rice from south india.", 
@@ -55,7 +55,7 @@ let data=[
 
     },
     {
-        name:"Indian Parmal Sella Rice, Packaging Size: 25 Kg, 1 Cm",
+        name:"Indian Parmal Sella Rice Packaging Size: 25 Kg, 1 Cm",
         price:"₹ 32/ Kg",
         image:"https://5.imimg.com/data5/SELLER/Default/2021/2/TC/JI/MC/45981979/toilet-cleaner-250x250.jpg",
   product_dis:"Parmal Sella Rice", 
@@ -73,7 +73,7 @@ let data=[
 
     },
     {
-        name:"Golden SILKY RICE, Packet",
+        name:"Golden SILKY RICE Packet",
         price:"₹ 26/ Kg",
         image:"https://5.imimg.com/data5/SELLER/Default/2021/5/VU/ES/OE/8806454/silk1-1-250x250.jpg",
   product_dis:"Silky Rice", 
@@ -91,7 +91,7 @@ let data=[
 
     },
     {
-        name:"Idli Rice, 2 kg (4.4lbs)",
+        name:"Idli Rice 2 kg (4.4lbs)",
         price:"₹ 159/ Pack",
         image:"https://5.imimg.com/data5/KN/CS/MY-14442040/idli-rice-250x250.jpg",
   product_dis:"idli rice", 
@@ -109,7 +109,7 @@ let data=[
 
     },
     {
-        name:"Golden Broken Rice, Packet",
+        name:"Golden Broken Rice Packet",
         price:"₹ 17,000/ Ton",
         image:"https://5.imimg.com/data5/SELLER/Default/2021/2/AT/LW/TC/70343428/whatsapp-image-2021-02-13-at-11-22-08-am-1--250x250.jpeg",
   product_dis:"Golden Broken Rice", 
@@ -127,7 +127,7 @@ let data=[
 
     },
     {
-        name:"Vardhans''s Delight HMT Rice, Packaging Type: PP Bag, Packaging Size: 25 Kg",
+        name:"Vardhans''s Delight HMT Rice Packaging Type: PP Bag, Packaging Size: 25 Kg",
         price:"₹ 43/ Kg",
         image:"https://5.imimg.com/data5/SELLER/Default/2020/8/YT/PM/NK/93814340/vardhans-s-delight-hmt-rice-250x250.jpg",
   product_dis:"HMT rice", 
@@ -145,7 +145,7 @@ let data=[
 
     },
     {
-        name:"Loose 100% Broken Raw Rice, Packaging Type: PP Bag, Packaging Size: 50 kg",
+        name:"Loose 100% Broken Raw Rice Packaging Type: PP Bag, Packaging Size: 50 kg",
         price:"₹ 22,000/ MT",
         image:"https://5.imimg.com/data5/FD/BO/EM/SELLER-73518290/100-broken-rice-250x250.jpg",
   product_dis:"Broken Raw Rice", 
@@ -163,7 +163,7 @@ let data=[
 
     },
     {
-        name:"Indian N Private labels.",
+        name:"Indian N Private labels",
         price:"₹ 41.25/ Kg",
         image:"https://4.imimg.com/data4/WA/BL/MY-5158094/ponni-par-boiled-250x250.jpg",
   product_dis:"We can offer Private labels Ponni Par Boiled Rice, Packaging Type: PP Bag, Packaging Size: 25 Kg", 
@@ -181,7 +181,7 @@ let data=[
 
     },
     {
-        name:"Mappillai Samba Rice, Packaging Size: 10-25 Kg",
+        name:"Mappillai Samba Rice Packaging Size: 10-25 Kg",
         price:"₹ 70/ Kg",
         image:"https://5.imimg.com/data5/MO/SL/MY-13537206/555555-250x250.jpg",
   product_dis:"Sanba rice", 
@@ -199,7 +199,7 @@ let data=[
 
     },
     {
-        name:"Gyco Elite Low GI Diabetic Brown Rice, PP Bag, Partial Polished",
+        name:"Gyco Elite Low GI Diabetic Brown Rice PP Bag, Partial Polished",
         price:"₹ 99/ Kg",
         image:"https://5.imimg.com/data5/IO/QZ/OF/SELLER-10449811/broken-brown-rice-250x250.jpeg",
   product_dis:"Low GI Diabetic Brown Rice", 
@@ -217,7 +217,7 @@ let data=[
 
     },
     {
-        name:"Indian Ramarajyam Purple - Steam Sonamasoori Ponni Rice, ",
+        name:"Indian Ramarajyam Purple - Steam Sonamasoori Ponni Rice ",
         price:"₹ 42/ Kg",
         image:"https://5.imimg.com/data5/XY/IJ/VA/SELLER-56234373/ramarajyam-purple-steam-sonamasoori-ponni-rice-250x250.jpg",
   product_dis:"Steam Sonamasoori Ponni Rice,Packaging Type: PP Bag, Packaging Size: 25 Kg", 
@@ -271,7 +271,7 @@ let data=[
 
     },
     {
-        name:"Indian 1121 Basmati Rice, Packet, 1kg",
+        name:"Indian 1121 Basmati Rice Packet, 1kg",
         price:"₹ 63/ 1Kg",
         image:"https://5.imimg.com/data5/SELLER/Default/2021/7/JO/IV/TF/127004348/indian-basmati-rice-250x250.jpg",
   product_dis:"BASMATI RICE", 
@@ -289,7 +289,7 @@ let data=[
 
     },
     {
-        name:"Indian Thuyamalli Rice, High In Protein",
+        name:"Indian Thuyamalli Rice High In Protein",
         price:"₹ 46/ Kg",
         image:"https://5.imimg.com/data5/ANDROID/Default/2021/2/QD/IV/EH/118426384/product-jpeg-250x250.jpg",
   product_dis:"Thuyamalli Rice", 
@@ -307,7 +307,7 @@ let data=[
 
     },
     {
-        name:"white-off white Blended Fortified Rice, PP bag",
+        name:"white-off white Blended Fortified Rice PP bag",
         price:"₹ 60/ Kg",
         image:"https://5.imimg.com/data5/SELLER/Default/2021/6/DC/VW/QC/14199337/nutritious-fortified-rice-250x250.jpg",
   product_dis:"white Blended Fortified Rice", 
@@ -327,7 +327,7 @@ let data=[
     
     {
         name:"",
-        price:"Hello Earth Black Rice, ",
+        price:"Hello Earth Black Rice ",
         image:"https://5.imimg.com/data5/AU/WQ/QA/SELLER-88885051/black-rice-250x250.jpg",
   product_dis:" Black Rice Packaging Type: Plastic Bag, Packaging Size: 25 Kg", 
       catagory:"rice",

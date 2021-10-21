@@ -4,89 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="indiamart.png" type="image/png">
+    <link rel="shortcut icon" href="/logos/indiamart.png" type="image/png">
+    <link rel="stylesheet" href="/css/user-input-page.css">
     <title></title>
-    <style>
-         *{
-            font-family: sans-serif;
-        }
-        #cont{
-            display: flex;            
-            border:none;
-            box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
-            width:70%;
-            height: 750px;
-            margin: auto;
-            padding: 10px;
-        }
-        #img_div{
-            border:none;
-            width: 250px;
-            height:530px;
-            margin-right: 10px;
-            padding:10px;
-            background-color: #1565C0;
-        }
-        #img_div > h4, ul{
-            color: white;
-            font-size: 18px;
-            justify-content: center;
-        }
-        img{
-            width:100%;
-            height:50%;
-            
-        }
-        #div_form{
-            border:none;
-            padding: 10px 10px 10px 50px;
-            width:400px;
-            height:700px;
-            line-height: 1.5rem;
-        }
-        #div_form > p{
-                font-weight: bold;
-        }
-        button{
-            width:100px;
-            height: 30px;
-            background-color:rgb(89, 206, 89) ;
-            border-style: none;
-            border-radius: 3px;
-            font-size: 15px;
-            font-weight: bold;
-            margin:20px 10px 10px 10px;
-        }
-        .btn:hover,.btn:focus{
-            cursor: pointer;
-        }
-        p{
-            margin-bottom: 2px;
-            margin-top:2px
-        }
-        #qty{
-            width:50px;
-            height:20px;
-        }
-    </style>
 </head>
 <body>
+
     <div id="cont">
+
         <div id="img_div">
+
             <img src='' id='img' alt="">
             <h4>How it works</h4>
+
             <ul>
                 <li>Tell us what you need by filling the form</li>
                 <li>Recieve Verified supllier details</li>
                 <li>Compare Quotaions and seal the deal</li>
                 <li>Pay with india mart and Get 100%, Buyer Protection</li>
             </ul>
+
         </div>
+
         <div id="div_form">
+
             <h3>Looking to buy something.</h3>
             <p>Tell us your requirments.</p>
+
             <form>
                 
                 <p>Enter Product and Service name</p>
@@ -123,44 +67,17 @@
                 <br>
                 <p>Enter your remaining details.</p>
                 <input type="text" placeholder="Please enter GST number to reach mores sellers.">
+
             </form>
+
             <button class="btn" onclick="next()">Next</button>
             <button type="reset"  class="btn" id='reset'>Reset</button>
+
         </div>
+
     </div>
+
 </body>
 </html>
-<script>
-    let item = JSON.parse(localStorage.getItem('item'));
-    let img = document.getElementById('img');
 
-    img.src = item.image;
-
-    function next(){
-        
-        if( localStorage.getItem('cart') === null){
-            localStorage.setItem('cart', JSON.stringify([]))
-        }
-
-        let cart = JSON.parse(localStorage.getItem('cart'));
-        let found = 1;
-        cart.forEach(function(el){
-            if(el.name === item.name){
-                found = 0;
-            }
-        })
-        if(found)
-            cart.push(item);
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-    
-        window.location.href="thankyou.html"
-    }
-
-    let reset_btn = document.getElementById('reset');
-    reset_btn.addEventListener('click', reset)
-
-    function reset(){
-        window.location.href = 'user_input_page.html';
-    }
-</script>
+<script src='/js/user-input-page.js'></script>

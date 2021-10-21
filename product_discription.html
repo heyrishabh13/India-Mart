@@ -72,6 +72,7 @@
             border:none;
             width:50%;
             height: 80%;
+            outline: none;
         }
         img{
             width: 80%;
@@ -217,14 +218,14 @@
                 <hr>
                 <p>Type <span>Ponni Rice</span></p>
                 <hr>
-                <p>Variety:<span id="pvarity"></span></p>
+                <p>Variety :<span id="pvarity">Medium Grain Size</span></p>
                 <hr>
                 <p>Branded : <span>Yes</span></p>
                 <hr>
                 
                 <div id="btn_box">
                     <h4 style="margin-left: 100px;margin-top: 5px;">Fill quantity to get Latest Price</h4>
-                    <input type="number" style="width:80px;height: 30px; margin-left:150px;"><select style="width:70px;height: 35px;"><option value="kg">in kg</option><option value="quintal">in Q.T</option></select><br>
+                    <input type="number" min="0" style="width:80px;height: 30px; margin-left:150px; outline: none;"><select style="width:70px;height: 35px;"><option value="kg">in kg</option><option value="quintal">in Q.T</option></select><br>
                     <button class="btn" id='btn'><ul style="font-size: 18px;">Get Latest Price</ul><ul style="margin-left: 18px; margin-top:-20px" >Request a quote</ul></button>
                 </div>
                 
@@ -297,7 +298,7 @@
                 <div id="Enqry">
                     <div style="background-color: rgb(10, 10, 95);color: whitesmoke;text-align: left;font-size: 20px;padding:1px;"><h3>Send your Enquiry to This Supplier</h3></div>
                 <p><strong>To</strong> <span style="margin-left: 30px;">ARM Orgaanics</span></p>
-                <input type="text" placeholder="Type your message here"><br>
+                <input type="text" placeholder="Type your message here" style="outline: none;"><br>
                 <button class="btn">Submit Requirement</button>
                 </div>
                 <hr>

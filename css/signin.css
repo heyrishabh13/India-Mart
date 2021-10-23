@@ -6,8 +6,8 @@ body {
   }
   
   .popup .content {
-   width: 600px;
-   height: 500px;
+   width: 500px;
+   height: 400px;
    
    text-align: center;
    top: 50%;
@@ -28,7 +28,7 @@ body {
    font-size: 30px;
    margin: auto;
    background-color: #1A237E;
-   width: 550px;
+   width: 460px;
    color: white;
    
   }

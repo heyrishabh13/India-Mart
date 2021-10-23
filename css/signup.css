@@ -2,7 +2,7 @@ body {
     background: white;
     font-family: raleway;
     color: black;
-    margin: 0;
+    /* margin-bottom: 500px; */
   }
   
   input  {
@@ -11,7 +11,7 @@ body {
   
   .popup .content {
    width: 600px;
-   height: 600px;
+   height: 680px;
    
    text-align: center;
    top: 50%;
@@ -50,7 +50,7 @@ body {
   }
   
   .input-field, .validate {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-bottom: 15px;
   color: black;
   padding: 2px;

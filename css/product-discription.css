@@ -221,3 +221,61 @@ hr{
 .btn:hover, .btn:focus{
     cursor: pointer;
 }
+#price{
+    color: blue;
+}
+#btn_box > h4{
+    margin-left: 100px;
+    margin-top: 5px;
+}
+#btn_box > input{
+    width:80px;
+    height: 30px;
+     margin-left:150px;
+}
+#btn_box > select{
+    width:70px;
+    height: 35px;
+}
+#get_price{
+    font-size: 18px;
+}
+#request_quote{
+    margin-left: 18px;
+    margin-top:-20px
+}
+#seller_div1{
+    width:150px;
+     height:150px;
+     margin:auto;
+}
+#contact_seller{
+    font-size: 20px;
+    text-align: center;
+    margin-top:-5px;
+    color:#00695C;
+}
+#company_details{
+    margin-left: 50px;
+}
+#sbtn > div > h4{
+    margin-top:-10px;
+}
+#lower{
+    display: flex;
+}
+#enqur_h3{
+    background-color: rgb(10, 10, 95);
+    color: whitesmoke;
+    text-align: left;
+    font-size: 20px;
+    padding:1px;
+}
+.ARM{
+    margin-left: 30px;
+}
+#YTvideo_div{
+    width: 640px;
+    height:360px;
+     background-size: contain;
+}

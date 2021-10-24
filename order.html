@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      #container {
+        margin: 0.5% 7%;
+        border: 1px solid white;
+        background-color: white;
+            
+      }
+      body{
+        background-color: #ECEFF1;
+      }
+      h1{
+        padding: 1%;
+        margin: 1% 6%;
+        background-color: white;
+        width: 20%;
+      }
+      #outerbox{
+        width: 95%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 29px;
+        margin-right: 29px;
+        border-radius: 15px;
+        border: 1px solid #CFD8DC;
+      }
+      #upperbox{
+        border-radius: 15px;
+        
+        margin: auto;
+        background-color: #EEEEEE;
+      }
+
+      #lowerbox{
+        border-radius: 15px;
+        height: 150px;
+        margin: auto;
+        background-color: white;
+      }
+      h3 {
+        margin: auto;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        padding-left: 35px;
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #455A64;
+      }
+      p{
+        margin: auto;
+        padding-top: 3px;
+        font-size: 13px;
+        padding-left: 35px;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        color: #616161;
+
+      }
+      h4{
+        margin: auto;
+        padding-top: 12px;
+        padding-left: 35px;
+        padding-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #9E9E9E;
+      }
+      h2 {
+        margin: auto;
+        padding-top: 15px;
+        padding-left: 50px;
+        padding-bottom: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: #424242;
+
+      }
+      h5 {
+        margin: auto;
+      
+        padding-left: 50px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        color: #424242 ;
+      }
+     
+      button {
+        margin-left: 80%;
+        margin-top: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: #00a699;
+        border-radius: 5px;
+        border: 1px dashed black;
+      }
+
+    </style>
+</head>
+<body>
+    <h1> My Orders</h1>
+
+    <div id="container">
+      <div id="outerbox">
+        <div id="upperbox"></div>
+        <div id="lowerbox">
+          <a href="pay.html"><button>Pay Now</button></a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    // get the data from local storage
+
+    let orders = JSON.parse(localStorage.getItem("products"));
+
+    let parent1 = document.getElementById("container");
+    let parent2 = document.getElementById("outerbox");
+    let div1 = document.getElementById("upperbox");
+    let div2 = document.getElementById("lowerbox");
+
+    function showProducts() {
+
+    orders.forEach(function(product) {
+      
+    let product_name = document.createElement("h3");
+    product_name.textContent = product.name;
+
+    let product_price = document.createElement("p");
+    product_price.textContent = " Price of the Product  -" + "   " + "Rs. " + "  "+product.price + "/ kg" ;
+
+    let product_size = document.createElement("p");
+    product_size.textContent = " Size of the Product -" + "   " + product.size;
+
+    let product_brand = document.createElement("p");
+    product_brand.textContent = "Brand of the Product  -" + "   " + product.brand;
+
+    let product_color = document.createElement("p");
+    product_color.textContent = " Color  of the Product -" + "   " + product.color;
+
+    let product_desire = document.createElement("h4");
+    product_desire.textContent = "I am interested in buying " + product.name;
+    
+    div1.append(product_name, product_price, product_size, product_brand, product_color, product_desire   );
+
+    let sellers_name = document.createElement("h2");
+    sellers_name.textContent =  product.seller;
+
+    let sellers_address = document.createElement("h5");
+    sellers_address.textContent = product.address;
+
+    let sellers_contact = document.createElement("h5");
+    sellers_contact.textContent = product.contact;
+    
+    let sellers_gst_no = document.createElement("h5");
+    sellers_gst_no.textContent = product.gst;
+    div2.append(sellers_name,sellers_address, sellers_contact, sellers_gst_no);
+
+    parent2.append(div1, div2);
+
+  
+    //parent1.append(parent2);
+});
+}
+showProducts();
+
+</script>

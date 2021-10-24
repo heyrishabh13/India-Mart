@@ -114,6 +114,7 @@ h1 {
 
 .covi {
     margin: 0% 31%;
+    height:23px;
 }
 
 /* .right div:hover {
@@ -123,12 +124,15 @@ h1 {
 .mgs,
 .sign {
     margin: -4% 22%;
-    height: 28px;
+    
+    height:23px;
 }
 #cam {
     display: flex;
 }
-
+  .search-text{
+    margin: 6% 6%
+  }
 @media only screen and (min-width:900px) and (max-width:1300px){
     .search-text{
         display: none; 
@@ -260,4 +264,18 @@ button{
 .left-cont{
     display: grid;
     grid-template-columns: 20% 70% ;
+}
+#location img{
+    margin: 5% 0%;
+    height: 16px;
+
+}
+#best-price > h2{
+    margin: 6%;
+}
+#upper > h3{
+    margin-top:0%;
+}
+.related > h2{
+    margin: 4% 1% 0% -9%;
 }

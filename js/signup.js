@@ -28,19 +28,47 @@
            number
        }
 
+       let error_p = document.getElementById('show-error');
+       console.log(error_p);
+       error_p.style.color = 'red';
+       error_p.style.margin = '0px';
+       error_p.style.textAlign = 'left';
+       error_p.style.marginLeft = '25px';
+
+       
        let arr = JSON.parse(localStorage.getItem("users"));
+       console.log(arr);
        let found = 1;
-       arr.forEach(function(el){
-           if(el.email === user.email){
-               found = 0;
-           }
-       })
-       if(found){
-           arr.push(user);
-           localStorage.setItem('fname', JSON.stringify(user.fname));
+
+       if(number.length === 10){
+            arr.forEach(function(el){
+                if(el.email === user.email){
+                    found = 0;
+                    error_p.innerText = '* User already exist with this email address'
+                }
+                else if(el.number === user.number ){
+                    found = 0;
+                    error_p.innerText = '* User already exist with this Number'
+                }
+            })
+
+            if(found){
+                arr.push(user);
+                localStorage.setItem('fname', JSON.stringify(user.fname));
+                error_p.style.color = 'green';
+                error_p.innerText = '* Valid Credentials'
+                setTimeout(function(){
+                 window.location.href = 'signin.html';
+              }, 500);
+              
+            } 
        }
+       else{
+           error_p.innerText = `* Please Enter a valid Number`;
+       }
+       
+      
        localStorage.setItem("users", JSON.stringify(arr));
 
-       window.location.href = 'signin.html';
-       
+      
    }

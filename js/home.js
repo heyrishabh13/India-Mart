@@ -71,10 +71,25 @@ let search_btn = document.getElementById('search-btn');
 
         setTimeout(function() {
             window.location.href = 'index.html';
-        },1000)
+        },2000)
     }
 
     if(localStorage.getItem('fname') !== null && JSON.parse(localStorage.getItem('fanme') !== '')){
         let reg = document.getElementById('reg');
         reg.innerHTML = JSON.parse(localStorage.getItem('fname'));
+    }
+
+
+    function signout(){
+
+        console.log('singout');
+        let fname = JSON.parse(localStorage.getItem('fname')); 
+
+        fname = 'Registration';
+
+        localStorage.setItem('fname', JSON.stringify(fname));
+
+        window.location.href = 'index.html';
+
+
     }

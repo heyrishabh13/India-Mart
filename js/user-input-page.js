@@ -22,12 +22,12 @@ let item = JSON.parse(localStorage.getItem('item'));
 
         localStorage.setItem('cart', JSON.stringify(cart));
     
-        window.location.href="/html/thankyou.html"
+        window.location.href="html/thankyou.html"
     }
 
     let reset_btn = document.getElementById('reset');
     reset_btn.addEventListener('click', reset)
 
     function reset(){
-        window.location.href = '/html/user-input-page.html';
+        window.location.href = 'html/user-input-page.html';
     }

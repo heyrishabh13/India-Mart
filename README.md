@@ -52,6 +52,11 @@ Or you can run the project live using <a href="https://upsehu.github.io/India-Ma
 - **LinkedIn** : https://www.linkedin.com/in/rishabh-kamboj-b76583113/
 
 ### Shailendra Singh
+- **Github** :shelen22
+- **Github Link** : https://github.com/Shelen22
+- **Email** : shailendrauday5@gmail.com
+- **LinkedIn** : https://www.linkedin.com/in/
+
 
 ### Nitin gupta
 

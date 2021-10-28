@@ -55,10 +55,8 @@ You can also run the project live using <a href="https://upsehu.github.io/India-
 - **Github** :shelen22
 - **Github Link** : https://github.com/Shelen22
 - **Email** : shailendrauday5@gmail.com
-- **LinkedIn** : https://www.linkedin.com/in/
+- **LinkedIn** :  https://www.linkedin.com/in/shailendrasingh22
 
-
-### Nitin gupta
 ### Nitin Gupta
 - **Github** : nitin9119
 - **Github Link** : https://github.com/nitin9119

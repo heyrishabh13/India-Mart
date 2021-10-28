@@ -78,7 +78,12 @@ let search_btn = document.getElementById('search-btn');
         let reg = document.getElementById('reg');
         reg.innerHTML = JSON.parse(localStorage.getItem('fname'));
     }
+     
+    function menuToggle(){
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('active');
 
+    }
 
     function signout(){
 
@@ -90,6 +95,5 @@ let search_btn = document.getElementById('search-btn');
         localStorage.setItem('fname', JSON.stringify(fname));
 
         window.location.href = 'index.html';
-
 
     }

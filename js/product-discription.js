@@ -38,7 +38,7 @@ function disp(prod){
     }
 
     function inputpg(){
-        window.location.href="user_input_page.html";
+        window.location.href="user-input-page.html";
     }
 }
 

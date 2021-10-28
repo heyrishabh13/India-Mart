@@ -81,5 +81,5 @@ showProducts();
 
 //PayNow function definition
 function payNow(){
-window.location.href = '/html/payment.html';
+window.location.href = 'payment.html';
 }

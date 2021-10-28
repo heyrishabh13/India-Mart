@@ -52,3 +52,8 @@ let search_btn = document.getElementById('search-btn');
         let reg = document.getElementById('reg');
         reg.innerHTML = JSON.parse(localStorage.getItem('fname'));
     }
+     
+    function menuToggle(){
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('active');
+    }

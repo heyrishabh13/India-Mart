@@ -166,10 +166,10 @@ button{
     margin-top: 28%;
 }
 #line1{
-    width: 100%;
+    width: 98%;
     background-color: white;
     border-radius: 5px;
-    margin: 4% 1% 1% 1% ;
+    margin: 4% 1% 1% 0% ;
     display: flex;
 }
 /* span{
@@ -278,4 +278,7 @@ button{
 }
 .related > h2{
     margin: 4% 1% 0% -9%;
+}
+#cont{
+    width: 100%;
 }

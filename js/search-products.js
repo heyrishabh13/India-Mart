@@ -6,7 +6,7 @@
 
     let container = document.createElement('div');
     container.style.display = 'grid';
-    container.style.gridTemplateColumns = '37% 37% 37%';
+    container.style.gridTemplateColumns = '39% 39% 39%';
     container.style.gridGap = '1%';
     container.style.margin = "3%";
 

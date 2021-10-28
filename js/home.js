@@ -50,7 +50,7 @@ let search_btn = document.getElementById('search-btn');
                         
                         reg.innerText = JSON.parse(localStorage.getItem('fname'));
 
-                        output_p.style.color = '#76FF03';
+                        output_p.style.color = 'green';
                         output_p.innerText = `* Welcome ${el.fname}`;
                         
                         num = '';

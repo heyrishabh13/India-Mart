@@ -46,7 +46,7 @@ disp();
 
 let supplier_btn = document.getElementById('btn');
     
-btn.addEventListener('click', userInputPage)
+supplier_btn.addEventListener('click', userInputPage)
     
 
 function userInputPage(){

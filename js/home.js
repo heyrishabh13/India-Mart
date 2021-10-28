@@ -17,7 +17,7 @@ let search_btn = document.getElementById('search-btn');
         
             localStorage.setItem('search',JSON.stringify(str.value))
         
-        window.location.href = '/html/search-products.html';
+        window.location.href = 'html/search-products.html';
     }
 
     

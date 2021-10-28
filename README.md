@@ -59,6 +59,11 @@ You can also run the project live using <a href="https://upsehu.github.io/India-
 
 
 ### Nitin gupta
+### Nitin Gupta
+- **Github** : nitin9119
+- **Github Link** : https://github.com/nitin9119
+- **Email** : nitin.gupta018@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/nitin-gupta-1b4b17209
 
 
 ### Anowar Hossain

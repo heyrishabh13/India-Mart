@@ -50,5 +50,5 @@ btn.addEventListener('click', userInputPage)
     
 
 function userInputPage(){
-    window.location.href = '/html/user-input-page.html';
+    window.location.href = 'user-input-page.html';
 }

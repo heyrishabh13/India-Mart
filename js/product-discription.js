@@ -38,7 +38,7 @@ function disp(prod){
     }
 
     function inputpg(){
-        window.location.href="user_input_page.html";
+        window.location.href="user-input-page.html";
     }
 }
 
@@ -46,9 +46,9 @@ disp();
 
 let supplier_btn = document.getElementById('btn');
     
-btn.addEventListener('click', userInputPage)
+supplier_btn.addEventListener('click', userInputPage)
     
 
 function userInputPage(){
-    window.location.href = '/html/user-input-page.html';
+    window.location.href = 'user-input-page.html';
 }

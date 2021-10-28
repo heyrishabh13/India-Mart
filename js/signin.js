@@ -18,7 +18,7 @@
       arr.forEach(function(el) {
       if(email === el.email  &&  password === el.password) {
         found = 0;
-        window.location.href = 'home.html';
+        window.location.href = '../index.html';
       }
       
     });

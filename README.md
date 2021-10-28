@@ -39,7 +39,7 @@
 ## Installation and Setup Instructions
 CLone down this repository using this <a href="https://github.com/Upsehu/India-Mart.git">link</a>
 
-Or you can run the project live using <a href="https://upsehu.github.io/India-Mart/">IndiaMart</a>
+You can also run the project live using <a href="https://upsehu.github.io/India-Mart/">IndiaMart</a> link.
 
 <hr/>
 

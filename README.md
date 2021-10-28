@@ -1,6 +1,6 @@
 # India Mart - clone
 
-### This is our first construct week project at Masai-School in which we have created a clone of https://indiamart.com/ . We have used HTML, CSS and JavaScript to create this project.
+### This is our first construct week project at Masai-School in which we have created a clone of <a href="https://indiamart.com/">India Mart</a> . We have used HTML, CSS and JavaScript to create this project.
 
 <hr>
 

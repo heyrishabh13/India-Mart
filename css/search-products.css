@@ -117,9 +117,6 @@ h1 {
     height:23px;
 }
 
-/* .right div:hover {
-    
-} */
 
 .mgs,
 .sign {
@@ -166,10 +163,10 @@ button{
     margin-top: 28%;
 }
 #line1{
-    width: 98%;
+    width: 95%;
     background-color: white;
     border-radius: 5px;
-    margin: 4% 1% 1% 0% ;
+    margin: 4% 0% 1% 2% ;
     display: flex;
 }
 /* span{
@@ -234,22 +231,27 @@ button{
     color: grey;   
 }
 #upper{
-    visibility:hidden;
-    display: inline-block;
-    /* position: absolute; */
-    /* float: right; */
-    width: 98%;
+
+    width: 95%;
     height: 100%;
-    margin: 0% 5%
+    /* margin: 0% 5%; */
+    /* border: 1px solid black; */
+    margin: auto;
     
 }
+
+#upper-boxes{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
 .vr{
     display: inline-flex;
     background-color: white;
     width: 10%;
     height: 150px;
     border-radius: 5px;
-    /* margin: -7px 0px 0px 5px; */
     text-align: center;
 }
 .vr:hover{
@@ -261,10 +263,14 @@ button{
 #loc{
     margin-top: 2%;
 }
+
 .left-cont{
+    width: 95%;
     display: grid;
-    grid-template-columns: 20% 70% ;
+    grid-template-columns: 20% 80% ;
+    margin: auto;
 }
+
 #location img{
     margin: 5% 0%;
     height: 16px;

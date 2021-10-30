@@ -14,26 +14,25 @@
 
 ## How to Use ✅
 
-- At first user has to click on `Registration` present in the right side of the navbar. User have to click on `Join Now` if he didn't have any account. In signup page user has to fill all the fields in the form. 
+- At first, the user has to click on `Registration` present on the right side of the navbar. After which the user can click on `Join Now` if he didn't have an account. On the signup page, the user has to fill all the fields in the form. 
 
-- After signup user has to login with same details, otherwise it will show invalid credentials.After login user will be redirected to home page.
+- After signup user has to log in with the same details, otherwise it will show invalid credentials. After login user will be redirected to the home page.
 
-- If user had already signup before than he can also make use of his mobile number to login using the `Strengthen Your Profile` section after navabar.
+- If the user had already signup before then he can also make use of his mobile number to log in using the `Strengthen Your Profile` section below the navbar on the home page.
 
-- Now User can search for `Rice` in search box present in the navbar and click on `Search` button. 
+- Now User can search for `Rice` in the search box present in the navbar and click on the `Search` button. 
 
-- Now User will be redirected to the `Search Product Page` which consist of all the products related to rice. And by clicking on any product the User will see the indetail description of the product as well as of the Seller.  
+- Now User will be redirected to the `Search Product Page` which consists of all the products related to rice. And by clicking on any product the User will see the in-detail description of the product as well as of the Seller.  
 
-- Now User can fill the `Quantity` details and click on `Get Latest Price ` or `Contact Seller` button which generate a form with the optional fields to be provided.
+- Now User can fill in the `Quantity` details and click on the `Get Latest Price ` or `Contact Seller`button which generates a form with the optional fields to be provided.
 
-- Now User can click on `Next` by which IndiaMart will recieve his requirements and seller will be going to conncect him further.
+- Now User can click on `Next` by which IndiaMart will receive his requirements and the seller will be going to connect him further.
 
-- Now User can also click on `Manage your requirement` button which redirected the user to the cart page.
+- Now User can also click on the `Manage your requirement` button which redirected the user to the cart page.
 
-- Now User can click on `Pay Now` and fill the 3 digit CVV, 16 digit card Number and card expiry year <= 2022 in the payment page.
+- Now User can click on `Pay Now` and fill in the 3 digit CVV, 16 digit card number, and card expiry year <= 2022 on the payment page.
 
-- After the successful payment User will see the response and after one second the User will be redirected to the home page.
-
+- After the successful payment User will see the response and after one second the user will be redirected to the home page.
 
 ## Sneak Peak
 #### Signup Page:

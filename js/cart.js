@@ -12,6 +12,7 @@ function showProducts() {
     
     let div1 = document.createElement('div')
     div1.style.class = 'upperbox';
+    div1.style.display = "flex";
 
     let div2 = document.createElement('div')
     div2.style.class = 'lowerbox';
@@ -81,7 +82,7 @@ function showProducts() {
 
     div5.append(product_name, product_price, product_size, product_brand, product_color, product_desire,div2);
     divbtn.append(pay_option);
-     div1.append(div5,divbtn)
+    div1.append(div5,divbtn)
     parent2.append(div1);
 
     });

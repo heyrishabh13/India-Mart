@@ -13,10 +13,9 @@ body{
 }
 h1{
   padding: 1%;
-  margin: -1% -1% 0% 1%;
+  margin: 1% 1% 0% 7%;
   background-color:white;
   color: #2e3192;
-  
   font-size: 25px;
   border-radius: 5px 5px 5px 5px;
   width: 10%;
@@ -29,10 +28,10 @@ h1{
   margin-right: 29px;
   border-radius: 15px;
   border: 1px solid grey;
+  
 }
 .upperbox{
   border-radius: 15px;
-  display: inline-block;
   
   margin: auto;
   background-color: #EEEEEE;
@@ -52,17 +51,16 @@ h3 {
   padding-left: 35px;
   font-style: normal;
   font-family: Arial, Helvetica, sans-serif;
-  color: #455A64;
+  color: #303335;
 }
 p{
   margin: auto;
   padding-top: 3px;
-  font-size: 13px;
+  font-size: 15px;
   padding-left: 35px;
-  font-style: italic;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
-  color: #616161;
+
+  font-weight: 600;
+  color: #363434;
 
 }
 h4{
@@ -71,7 +69,7 @@ h4{
   padding-left: 35px;
   padding-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #9E9E9E;
+  color: #504f4f;
 }
 h2 {
   margin: auto;
@@ -89,7 +87,7 @@ h5 {
   padding-left: 50px;
   padding-bottom: 5px;
   font-size: 14px;
-  color: #424242 ;
+  color: #383636 ;
 }
 h6{
   margin: auto;
@@ -102,10 +100,14 @@ h6{
   background-color: #00a699;
   align-content: center;
   border: none;
+  
+  cursor: pointer;
+  color: white;
   font-weight: bolder;
-  width: 100px;
-  height: 30px;
+  width: 130px;
+  height: 35px;
   margin: 1% 15%;
+  
 }
  #details{
       /* /* display: block; */
@@ -116,11 +118,7 @@ h6{
       border-radius: 10px 10px 10px 10px;
       display: inline-block;
       background-color:whitesmoke;
-      overflow-x:hidden ;
-       transition-property: all;
-       transition-duration: .5s;
-       max-height:auto;
-       transition-timing-function: cubic-bezier(0,1,.5,1);
+      
 }  
 #details.closed{
   max-height:auto ;
@@ -136,4 +134,7 @@ h6{
 }
 #homepg>a{
   color:#2e3192 ;
+}
+#divbtn{
+   margin: auto;
 }

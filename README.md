@@ -1,8 +1,39 @@
 # India Mart - clone
 
-### This is our first construct week project at Masai-School in which we have created a clone of <a href="https://indiamart.com/">India Mart</a> . We have used HTML, CSS and JavaScript to create this project.
+<img src="https://user-images.githubusercontent.com/16943997/138560458-a56fa67d-102a-4a87-8edf-421dfdf8a6c9.png">
+
+>  This is our first construct week project at Masai-School in which we have created a clone of <a href="https://indiamart.com/">India Mart</a> . 
 
 <hr>
+
+## Tech Stack:
+- #### HTML
+- #### CSS
+- #### JavaScript
+- #### GIT
+
+## How to Use ✅
+
+- At first user has to click on `Registration` present in the right side of the navbar. User have to click on `Join Now` if he didn't have any account. In signup page user has to fill all the fields in the form. 
+
+- After signup user has to login with same details, otherwise it will show invalid credentials.After login user will be redirected to home page.
+
+- If user had already signup before than he can also make use of his mobile number to login using the `Strengthen Your Profile` section after navabar.
+
+- Now User can search for `Rice` in search box present in the navbar and click on `Search` button. 
+
+- Now User will be redirected to the `Search Product Page` which consist of all the products related to rice. And by clicking on any product the User will see the indetail description of the product as well as of the Seller.  
+
+- Now User can fill the `Quantity` details and click on `Get Latest Price ` or `Contact Seller` button which generate a form with the optional fields to be provided.
+
+- Now User can click on `Next` by which IndiaMart will recieve his requirements and seller will be going to conncect him further.
+
+- Now User can also click on `Manage your requirement` button which redirected the user to the cart page.
+
+- Now User can click on `Pay Now` and fill the 3 digit CVV, 16 digit card Number and card expiry year <= 2022 in the payment page.
+
+- After the successful payment User will see the response and after one second the User will be redirected to the home page.
+
 
 ## Sneak Peak
 #### Signup Page:
@@ -65,6 +96,10 @@ You can also run the project live using <a href="https://upsehu.github.io/India-
 
 
 ### Anowar Hossain
+- **Github** : anowar265
+- **Github Link** : https://github.com/anowar265
+- **Email** : anowar3042@gmail.com
+- **LinkedIn** :  https://www.linkedin.com/in/hossainanowaroffical/
 
 
 

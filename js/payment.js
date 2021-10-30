@@ -6,15 +6,21 @@ function pay() {
   years = Number(years);
   console.log(typeof years);
 
+  let flag = 1;
   if (cvv.length != 3) {
     document.querySelector("#in_pass").textContent = "*Invalid Credential";
+    flag = 0;
   }
   if (card.length != 16) {
     document.querySelector("#in_nm").textContent = "*Invalid Card Number";
+    flag = 0;
   }
   if (years > 2022) {
     document.querySelector("#exp").textContent = "*Date Expired for this card";
-  } else {
+    flag = 0;
+  } 
+  
+  if(flag) {
     window.location.href = "payment-done.html";
   }
 }

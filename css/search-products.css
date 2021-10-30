@@ -169,22 +169,14 @@ button{
     margin: 4% 0% 1% 2% ;
     display: flex;
 }
-/* span{
-    margin:1% 1% 5% 1%;
-} */
+
 #left{
     visibility: hidden;
-    /* display: flex; */
-    /* flex-direction: column; */
-   
-    /* height: 1200px; */
     height: fit-content;
     background-color: white;
-    /* position: relative; */
     margin-top: 10%;
 
     margin-left: 1%;  
-    /* word-wrap:break-word; */
 }
 .related{
 
@@ -234,8 +226,6 @@ button{
 
     width: 95%;
     height: 100%;
-    /* margin: 0% 5%; */
-    /* border: 1px solid black; */
     margin: auto;
     
 }
@@ -243,7 +233,6 @@ button{
 #upper-boxes{
     width: 95%;
     margin: auto;
-    /* border: 1px solid red; */
 }
 
 .vr{
@@ -287,4 +276,42 @@ button{
 }
 #cont{
     width: 100%;
+    
+    display : grid;
+    grid-template-columns:   repeat(3, 32%);
+    grid-gap : 1%;
+    margin : 3%;
 }
+
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 1024px) {
+    
+    #best-price, .location , #left, .right{
+        display: none;
+    }
+
+    #cont {
+        width : 100%;
+        margin: auto; 
+        
+    }
+
+    .left-cont{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 2%;
+    }
+
+  }
+
+  @media screen and (max-width: 880px) {
+
+    
+    #cont{
+        grid-template-columns: repeat(2,48%);
+    }
+
+  }
+
+

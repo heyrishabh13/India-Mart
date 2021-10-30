@@ -1,14 +1,10 @@
-    let body = document.getElementById('cont');
+    let container = document.getElementById('cont');
     let loc = document.getElementById("loc");
     let h2 = document.createElement('h2');
     h2.style.margin = '5% 1% -4%';
 
 
-    let container = document.createElement('div');
-    container.style.display = 'grid';
-    container.style.gridTemplateColumns = 'repeat(3, 32%)';
-    container.style.gridGap = '1%';
-    container.style.margin = "3%";
+    // let container = document.createElement('div');
 
     console.log(h2);
     let line1 = document.createElement('div');
@@ -124,7 +120,7 @@
 
     line1.append(imgloc,list,input,near,nearme,rigthcontent,city,city1,city2,city3,city5,city6,city7,city8,city9);
     loc.append(h2,line1);
-    body.append(container);
+    
     
     let search_btn = document.getElementById('search-btn');
 

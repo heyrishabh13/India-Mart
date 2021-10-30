@@ -137,11 +137,11 @@ h1 {
     .search-button{
         width:50px;
     }
-    .img{
+    /* .img{
        background-image: url("https://reflectivesafetyjackets.in/wp-content/uploads/2019/11/indiamart-icon.png");
        background-size: contain;
        margin-right: 0%;
-    }
+    } */
     #best-price{
         font-size: 8px;
         max-width: 80%;
@@ -285,9 +285,16 @@ button{
 
 
 /* Tablet Responsiveness */
+@media screen and (max-width: 1345px){
+    .location{
+        display: none;
+    }
+
+}
+
 @media screen and (max-width: 1024px) {
     
-    #best-price, .location , #left, .right{
+    #best-price , #left, .right{
         display: none;
     }
 
@@ -311,7 +318,12 @@ button{
     
     #cont{
         grid-template-columns: repeat(2,49%);
+        margin-top: 5%;
         /* border: 1px solid red; */
+    }
+
+    #loc, #upper{
+        display: none;
     }
 
   }

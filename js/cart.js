@@ -12,10 +12,14 @@ function showProducts() {
     
     let div1 = document.createElement('div')
     div1.style.class = 'upperbox';
+    div1.style.display = "flex";
 
     let div2 = document.createElement('div')
     div2.style.class = 'lowerbox';
-
+      
+    let div5 = document.createElement("div");
+   
+    
     let product_name = document.createElement("h3");
     product_name.textContent = product.name;
 
@@ -51,8 +55,15 @@ function showProducts() {
     sellers_contact.textContent = product.phone_num;
 
     let div3 = document.createElement('div');
+   
     div3.setAttribute("id", "details")
+     div3.addEventListener("click",()=>{
+          details();
+     })
+     
 
+    let divbtn = document.createElement("div");
+    divbtn.setAttribute("id", "divbtn");
     let pay_option = document.createElement("button");
     pay_option.setAttribute("id","btn");
     pay_option.textContent = "Pay Now";
@@ -67,16 +78,22 @@ function showProducts() {
 
 
 
-    div2.append(div3, pay_option ,hr);
+    div2.append(div3 ,hr);
 
-    div1.append(product_name, product_price, product_size, product_brand, product_color, product_desire,div2  );
-
+    div5.append(product_name, product_price, product_size, product_brand, product_color, product_desire,div2);
+    divbtn.append(pay_option);
+    div1.append(div5,divbtn)
     parent2.append(div1);
 
     });
 }
 
 showProducts();
+ 
+function details(){
+    
+}
+
 
 
 //PayNow function definition

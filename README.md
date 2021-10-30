@@ -12,6 +12,15 @@
 - #### JavaScript
 - #### GIT
 
+<hr>
+
+## Installation and Setup Instructions
+CLone down this repository using this <a href="https://github.com/Upsehu/India-Mart.git">link</a> and open index.html file.
+
+You can also run the project live using <a href="https://upsehu.github.io/India-Mart/">IndiaMart</a> link.
+
+<hr>
+
 ## How to Use ✅
 
 - At first, the user has to click on `Registration` present on the right side of the navbar. After which the user can click on `Join Now` if he didn't have an account. On the signup page, the user has to fill all the fields in the form. 
@@ -33,6 +42,8 @@
 - Now User can click on `Pay Now` and fill in the 3 digit CVV, 16 digit card number, and card expiry year <= 2022 on the payment page.
 
 - After the successful payment User will see the response and after one second the user will be redirected to the home page.
+
+<hr>
 
 ## Sneak Peak
 #### Signup Page:
@@ -66,10 +77,7 @@
 <img src="https://user-images.githubusercontent.com/16943997/138561541-4a5298ef-c92f-4f69-b4e5-820f4d450fad.png" />
 
 
-## Installation and Setup Instructions
-CLone down this repository using this <a href="https://github.com/Upsehu/India-Mart.git">link</a> and open index.html file.
 
-You can also run the project live using <a href="https://upsehu.github.io/India-Mart/">IndiaMart</a> link.
 
 <hr/>
 

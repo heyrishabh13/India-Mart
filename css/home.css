@@ -115,7 +115,7 @@ h1 {
   gap: 13px;
 }
 
-.right > div {
+.right div {
   font-size: 15px;
   cursor: pointer;
 }

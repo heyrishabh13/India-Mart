@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let body = document.querySelector('body');
+
+    function showProduct(){
+        let product = JSON.parse(localStorage.getItem('item'));
+
+        let container = document.createElement('div');
+
+        let left_div = document.createElement('div');
+        left_div.style.display = 'inline-block';
+        left_div.style.width = '40%';
+        
+        left_div.style.border = '1px solid red';
+
+
+        let img_box = document.createElement('div');
+        img_box.style.display = 'inline-block';
+        img_box.style.margin = 'auto';
+        img_box.style.border = '1px solid blue';
+        let img = document.createElement('img');
+        img.src = product.img;
+        img.style.height = '100%';
+        // img.style.padding = '0 25%';
+        
+        img_box.append(img);
+
+        left_div.append(img_box);
+
+        let text_box = document.createElement('div');
+        text_box.style.display = 'inline-block';
+        text_box.style.verticalAlign = 'top';
+        text_box.style.border = '1px solid black';
+
+        let name = document.createElement('h1');
+        name.innerHTML = product.name + ', Pakcaging Size: ' + product.size;
+        name.style.margin ='0';
+
+        let price = document.createElement('h1');
+        price.innerHTML = product.price;
+
+        
+        text_box.append(h2);
+
+
+
+        container.append(left_div, text_box);
+        body.append(container);
+    }
+
+    showProduct();
+</script>

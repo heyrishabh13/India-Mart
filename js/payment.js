@@ -15,12 +15,12 @@ function pay() {
     document.querySelector("#in_nm").textContent = "*Invalid Card Number";
     flag = 0;
   }
-  if (years > 2022) {
+  if (years > 2025) {
     document.querySelector("#exp").textContent = "*Date Expired for this card";
     flag = 0;
-  } 
-  
-  if(flag) {
+  }
+
+  if (flag) {
     window.location.href = "payment-done.html";
   }
 }
